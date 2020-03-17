@@ -1,0 +1,163 @@
+\documentclass[10pt]{article}
+\usepackage[portuguese]{babel}
+\usepackage[a4paper, top = 0.8in, bottom = 0.9in, left =0.6in, right = 0.6in]{geometry}
+\usepackage{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{wrapfig}
+\usepackage{circuitikz}
+\usepackage{titlesec}
+\usepackage{wrapfig}
+\usepackage{listings}
+\usepackage{tikz}
+
+\usepackage{caption}
+\usepackage{ragged2e}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{amsmath, mathtools, amssymb}
+\usepackage[makeroom]{cancel}
+\usepackage{parskip}
+\usepackage{array, makecell}
+\usepackage{booktabs}
+\titleformat{\section}
+{\normalfont\large\bfseries}{\thesection)}{1em}{}
+\titleformat{\subsection}
+{\normalfont\normalsize\bfseries}{\thesubsection)}{1em}{}
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsection)}{1em}{}
+
+
+%\pretitle{\begin{center}\Huge\bfseries}
+
+\pagestyle{fancy}
+\fancyhead{}
+\centering\chead{\includegraphics[width=15cm]{imagens/unb_fga_logo_extenso.jpg}}
+\lfoot{Prática de Circuitos 1 - 2020/1}
+\rfoot{\textbf{Prof. Dr. Marcus V. Chaffim Costa}} %nome do rodape
+\renewcommand{\footrulewidth}{1pt}
+
+\setlength{\parskip}{0.1cm}
+\author{Monitoria - 2019/2}
+\title{Tutorial 0}
+
+
+%arrumação das tabelas
+
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.2}}% for the vertical padding
+\captionsetup[table]{name= \bfseries Tabela}
+\captionsetup[figure]{name= \bfseries Figura}
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+\aboverulesep=0cm
+\belowrulesep=0cm
+
+%configuracoes dos codigos em matlab
+
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+\allowdisplaybreaks
+
+
+%==============macros para uso nos documentos===================%
+
+\newcommand{\ohm}{\Omega}
+
+
+\newcommand{\figuras}[4]{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width={#1}\textwidth]{{#2}}
+        \caption{{#3}}
+        \label{fig:{#4}}
+    \end{figure}
+}
+
+\newcommand{\figura}[2]{
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width={#1}\textwidth]{{#2}}
+    \end{figure}
+}
+
+\newcommand{\subfiguras}[5]{
+    \centering
+    \begin{subfigure}[H]{#1\textwidth}
+        \centering
+        \includegraphics[width={#2}\textwidth]{{#3}}
+        \caption{{#4}}
+        \label{fig:{#5}}
+    \end{subfigure}
+}
+
+\newcommand{\circuito}[3]{
+    \begin{figure}[H]
+        \centering
+        \begin{circuitikz}[line width=.5pt]
+            #1
+        \end{circuitikz}
+        \caption{{#2}}
+        \label{circ:{#3}}    
+    \end{figure}
+}
+
+\newcommand{\calc}[1]{
+    \begin{gather*}
+        #1
+    \end{gather*}
+}
+
+
+
+
+
+%=====================================================%
+
+\usetikzlibrary{automata}
+
+\begin{document}
+
+\begin{center}
+\vspace*{.03cm}
+\Large\textbf{Experimento 02:}\\ %titulo
+\Large{Leis de Kirchhoff}
+\end{center}
+\justify
+
+\section{Objetivos}
+
+O objetivo deste experimento é a prática do método dos nós e das malhas para análise de circuitos eletrônicos. São abordadas
+as resoluções de circuitos utilizando estes métodos, bem como a montagem dos circuitos correspondentes e sua verificação
+experimental através da medição das grandezas elétricas consideradas nas resoluções.
+
+\input{estudo_pre_laboratorial.tex}
+
+\end{document}

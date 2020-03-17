@@ -1,0 +1,170 @@
+\section{Impedâncias}
+
+\subsection{Circuito A}
+A figura \ref{fig:circuit_a_imp} retrata o modelo de impedância de entrada para o circuito Amplificador Operacional Inversor.
+
+\begin{figure}[H] 
+    \centering
+    \begin{adjustbox}{width=.5\textwidth}
+    \begin{circuitikz}[line width=.5pt]
+        \draw
+        
+        (0,0) node [ground] {} to [american controlled voltage source , l_= $A(V^+-V^-)$, invert] (0,3)
+            to [R = $R_o$, -o] (5,3) node [right] {$V_o$}
+            (4,3) to [short, *-] (4,5)
+            to [R=$R_2$, f<=$i_2$] (-4,5)
+            to [short, -*] (-4,3)
+            to [R = $R_1$, f<=$i_1$, -o] (-7,3)
+            (-7.7,3) node[right] {$V_1$}
+            
+            (-4,3) to [short, f=$i_i$] (-2,3)
+            to [R = $R_i$] (-2,1)
+            to [short] (-4,1)
+            to [short] (-4,0) 
+            to [short,-*] (0,0)
+            to [short, -*] (3,0)
+            
+        ;
+            
+    \end{circuitikz}
+    \end{adjustbox}
+    \caption{Circuito A}
+    \label{fig:circuit_a_imp}
+\end{figure}
+
+Podemos aplicar a Lei de Kirchhoff no nó de entrada para observar o comportamento da resistência de entrada:
+
+    
+
+\begin{gather*}
+    i_1 =i_2+i_i\\\\
+    \dfrac{V_- - V_1}{R_1} = \dfrac{V_o - V_-}{R_2} + \dfrac{V_+ - V_-}{R_i}
+    \Longrightarrow
+    \dfrac{V_+ - V_-}{R_i} = \dfrac{ V_- - V_1}{R_1} - \dfrac{V_o - V_-}{R_2}
+    \\
+    \\
+    \dfrac{V_+ - V_-}{R_i} = \dfrac{(V_- - V_1)R_2 - (V_o - V_-)R_1}{R_1 R_2}\\
+\end{gather*}
+\begin{equation}
+    R_i = \dfrac{(V_+ - V_-) R_1 R_2}{(V_- - V_1) R_2 - (V_o - V_-)R_1}
+\end{equation}
+
+Para a resistência de saída, aplicamos a Lei de Kirchhoff no nó de saída, donde obtemos
+
+\begin{gather*}
+    \dfrac{V_o - V_-}{R_2} = \dfrac{A(V_+ - V_-) - V_o}{R_o}
+\end{gather*}
+\begin{equation}
+        R_o = \dfrac{(AV_+ - AV_- - V_o)R_2}{V_o - V_-}
+\end{equation}
+
+\subsection{Circuito B}
+
+    O circuito da figura \ref{fig:circuit_b_imp} retrata o modelo de circuito Amplificador Operacional Somador Inverso.
+
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{width=.5\textwidth}
+    \begin{circuitikz}[line width = .5pt]
+        \draw
+            (0,0) node [ground] {} to [american controlled voltage source , l_= $A(V^+-V^-)$, invert] (0,3)
+            to [R = $R_o$, -o] (5,3) node [right] {$V_o$}
+            (4,3) to [short, *-] (4,5)
+            to [R=$R_2$, f<^=$i$] (-4,5)
+            to [short, -*] (-4,3) -- (-5,3)
+            to [R = $R_3$, f<=$i_2$, -o] (-8,3)
+            node[left] {$V_2$}
+            (-5,3) to [short,*-] (-5,4)
+            to [R = $R_1$, f<=$i_2$, -o] (-8,4) node [left] {$V_1$}
+            (-5,3) to [short] (-5,2)
+            to [R = $R_4$, f<=$i_3$, -o] (-8,2) node [left] {$V_3$}
+            
+            (-4,3) to [short, f=$i_i$] (-2,3)
+            to [R = $R_i$] (-2,1)
+            to [short] (-4,1)
+            to [short] (-4,0) 
+            to [short,-*] (0,0)
+            to [short, -*] (3,0)
+            
+        ;
+    \end{circuitikz}
+    \end{adjustbox}
+    \caption{Circuito B}
+    \label{fig:circuit_b_imp}
+\end{figure}
+
+    Podemos observar o comportamento da impedância de entrada analisando o nó de entrada com a Lei de Kirchhoff:
+    
+    \begin{gather*}
+        i + i_i = i_1 + i_2 + i_3\\ \\
+        \dfrac{V_o - V_-}{R_2} + \dfrac{V_+ - V_-}{R_i} = \dfrac{V_- - V_1}{R_1} + \dfrac{V_- - V_2}{R_3} + \dfrac{V_- - V_3}{R_4}\\
+        \dfrac{V_+ - V_-}{R_i} = \dfrac{V_- - V_1}{R_1} + \dfrac{V_- -V_2}{R_3} + \dfrac{V_- -V_3}{R_4} - \dfrac{V_o - V_-}{R_2}\\
+        \dfrac{V_+ - V_-}{R_i} = \dfrac{(V_- - V_1)R_2 R_3 R_4 - (V_o - V_-)R_1 R_3 R_4 + (V_- - V_2)R_1 R_2 R_4 + (V_- - V_3)R_1 R_2 R_3}{R_1 R_2 R_3 R_4}\\
+        R_i=\dfrac{R_1 R_2 R_3 R_4(V_+ - V_-)}{(V_- - V_1)R_2 R_3 R_4 - (V_o - V_-)R_1 R_3 R_4 + (V_- - V_2)R_1 R_2 R_4 + (V_- - V_3)R_1 R_2 R_3}
+    \end{gather*}
+    
+    Podemos analisar a impedância de saída a partir do nó de saída do circuito, donde temos
+    \begin{gather*}
+        \dfrac{V_o - V_-}{R_2} = \dfrac{A(V_+ - V_-) - V_o}{R_o}\\
+        R_o = \dfrac{(AV_+ - AV_- - V_o)R_2}{V_o - V_-}
+    \end{gather*}
+
+\subsection{Circuito C}
+
+\begin{figure}[H]
+    \centering
+    \begin{adjustbox}{width=.5\textwidth}
+    \begin{circuitikz}[line width = .5pt]
+        \draw
+            (0,0) node [ground] {} to [american controlled voltage source , l_= $A(V^+-V^-)$, invert] (0,3)
+            to [R = $R_o$, -o] (5,3) node [right] {$V_o$}
+            (4,3) to [short, *-] (4,6)
+            to [R=$R_2$, f<^=$i_2$] (-4,6)
+            to [short, -*] (-4,4.5)
+            to [R = $R_1$, f<=$i_1$, -o] (-8,4.5)
+            node[left] {$V_1$}
+            (-8,2.5) node [left] {$V_2$}
+            to [R = $R_3$, f>^=$i_3$, o-*] (-4,2.5)
+            
+            (-4,4.5) to [short, f=$i_i$] (-2,4.5)
+            to [R = $R_i$] (-2,2.5)
+            to [short] (-4,2.5)
+            to [R = $R_4$, f_= $i_4$](-4,0)
+            to [short,-*] (0,0)
+            to [short, -*] (3,0)
+            
+        ;
+    \end{circuitikz}
+    \end{adjustbox}
+    \caption{Circuito C}
+    \label{fig:circuit_c_imp}
+\end{figure}
+
+ O circuito da figura \ref{fig:circuit_c_imp} é uma abstração do funcionamento do amplificador operacional arranjado na configuração de Subtrator.
+ 
+ Analisando o nó de entrada, podemos obter a impedância de entrada. Desse modo, 
+ 
+\begin{gather*}
+     i_i = i_2 - i_1\\ \\
+     \dfrac{V_+ - V_-}{R_i} = \dfrac{V_o - V_-}{R_2} - \dfrac{V_- - V_1}{R_1}
+\end{gather*}
+\begin{equation}
+         R_i = \dfrac{(V_+ - V_-)R_1 R_2}{(V_o - V_-)R_1 - (V_- - V_1)R_2}
+\end{equation}
+\begin{center}
+    ou
+\end{center}
+\begin{gather*}
+     i_i = i_4 - i_3\\
+     \\
+     \dfrac{V_+-V_-}{R_i} = \dfrac{V_o - V_-}{R_4} - \dfrac{V_- - V_2}{R_3}\\
+\end{gather*}
+\begin{equation}
+         R_i = \dfrac{(V_+ - V_-)R_3 R_4}{V_+ R_3 - (V_+ - V_2)R_4}
+\end{equation}
+
+ Agora, analisando o nó de saída, temos:
+\begin{gather*}
+    \dfrac{V_o - V_-}{R_2} = \dfrac{A(V_+ - V_-) - V_o}{R_o}\\
+    R_o = \dfrac{(AV_+ - AV_- -V_o)R_2}{V_o - V_-}
+\end{gather*}

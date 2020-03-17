@@ -1,0 +1,83 @@
+\section{Estudo pré-laboratorial}
+
+Nessa secção dar-se-á uma explicação, no sentido lato, sobre as características principais dos demais instrumentos de bancada.
+
+\subsection{Multímetro}
+
+Quando mede-se uma tensão AC com multímetro, há interesse em saber o valor eficaz do sinal, ou seja, o valor RMS. Entretanto, há apenas uma classe específica de multímetros que podem fazer tal medição: os True RMS. Multímetros classificados com True RMS permitem a leitura precisa mesmo para tensões AC muito distorcidas.
+
+É importante ressaltar que o conceito de sinal AC refere-se às correntes alternadas geralmente no formato senoidal, mas a definição também abarca as ondas triangulares ou quadradas. A corrente alternada é, portanto, toda corrente elétrica cujo sentido varia no tempo, ao contrário da corrente contínua cujo sentido permanece constante ao longo do tempo.
+
+As formas dos sinais AC para leitura via multímetro dependem, em grande parte, da frequência em que a corrente varia. Os multímetros conseguem captar uma boa leitura em uma faixa de valores específica para cada modelo. A extrapolação desses valores implicam em uma leitura com pouca acurácia e, em casos de leituras com baixa frequência, um erro de precisão.
+
+Use, agora, os manuais dos equipamentos, as referências bibliográficas e demais fontes de informação para responder as seguintes questões:
+
+\vspace{.3cm}
+
+a) Sobre o multímetro ET-1110 da Minipa:
+\begin{itemize}
+    \item Como devem ser os sinais AC para que possam ser medidos com o multímetro?
+    \item Quais as medidas de um sinal AC que podemos obter com o multímetro? O que é peculiar a um multímetro "true rms"?
+\end{itemize} 
+
+
+\subsection{Geradores de funções}
+
+Os geradores de funções trabalham gerando algumas formas de onda, geralmente triangular, quadrada e senoidal. O equipamento permite manipular a amplitude, frequência, duty cicle e o offset dos sinais. As faixas de operação do equipamento dependem do modelo e das condições de uso.
+
+Use, agora, os manuais dos equipamentos, as referências bibliográficas e demais fontes de informação para responder as seguintes questões:
+
+\vspace{.3cm}
+
+b) Sobre os geradores de funções: modelo SDG 1020 da SIGLENT e modelo GV-2002 da iCEL:
+\begin{itemize}
+    \item Quais as formas de onda possíveis de serem geradas pelo gerador de funções?
+    \item Qual o intervalo de frequências permitido pelo equipamento?
+    \item Qual a amplitude máxima e mínima possíveis para as formas de onda?
+    \item Esse gerador de funções produz valor DC de tensão? Se sim, como? Se não, por quê?
+\end{itemize}
+
+\subsection{Osciloscópio}
+
+Se ao gerador de funções é dada a função de produzir formas de onda variantes no tempo, ao osciloscópio é dada a função de análise desses sinais, não so gerados pelo gerador de funções, mas de quaisquer espécie desde que seja periódico e com um padrão definido. O osciloscópio é um aparelho eletrônico que permite-se visualizar e analisar uma diferença de potencial (DDP) em função do tempo em um gráfico bidimensional.
+
+Atualmente os osciloscópios contam com uma gama de operações matemáticas, as quais permitem somar, subtrair, multiplicar e dividir sinais, além de poder aplicar transformações de domínio como a FFT ("\textit{Fast Fourier Transform}").
+
+Use, agora, os manuais dos equipamentos, as referências bibliográficas e demais fontes de informação para responder as seguintes questões:
+
+\newpage
+
+c) Osciloscópio modelo 2530 da BK Precision:
+\begin{itemize}
+    \item Explique a funcionalidade da função MEASURE.
+    \item Explique como medir a amplitude e a frequência de um sinal periódico no osciloscópio sem o auxílio da função MEASURE (Dica: procure sobre a ferramenta "\textit{cursors}"). 
+    \item 
+\end{itemize}
+
+\subsection{Pesquise e responda:}
+
+\noindent b) O que é o valor pico-a-pico de um sinal AC? E a amplitude?
+
+\noindent c) O que é o valor médio (também chamado de valor DC) de um sinal AC? Como ele pode ser calculado?
+
+\noindent d) O que é o valor eficaz (também chamado de valor RMS) de um sinal AC? Como ele pode ser calculado?
+
+\noindent e) Esboce as formas de onda e calcule a tensão eficaz $V_ef$ para os seguintes sinais:
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|l|}
+    \hline
+    Formas de onda  & Frequência (kHz) & Valor Médio (V) & Amplitude (V) & Valor Eficaz (V) \\
+    \hline
+    C1 - Quadrada   & 15               & 1               & 2             &                                      \\
+    \hline
+    C2 - Triângular & 4                & 0               & 3             &                                      \\
+    \hline
+    C3 - Senoidal   & 1                & 0,5             & 2,5           &     \\ \hline                                
+    \end{tabular}
+    \caption{Formas de onda.}
+    \label{tab:form_wave}
+    \end{table}
+
+Dica: resolva para um valor $f$ de frequência e depois substitua cada um dos valores correspondentes no resultado. Lembre-se que $\omega = 2\pi f$, com $\omega$ medido em rad/s e $f$ medido em Hz. Observe e comente: qual a relação entre a frequência da senoide e seu valor eficaz?

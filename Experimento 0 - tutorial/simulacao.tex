@@ -1,0 +1,200 @@
+\newpage
+\section{Simulações}
+
+Considere os circuitos abaixo:
+
+\begin{minipage}{.5\textwidth}
+    \circuito{
+        \draw
+    
+        (0,0) node [ground]{} to [short,-*] (0,0)
+        to [short](-2,0) to [american voltage source, invert, -*](-2,3)
+        node [above, color = red]{$V_f$}
+        to [short] (2,3) node [above, color = red]{$V_R$} to [R, l=R, f>_=$i_R$,*-] (2,0)
+        to [short] (0,0);
+    }{Circuito A}{circ_a}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+    \circuito{
+    \draw
+    
+    (0,0) node [ground]{} to [short,-*] (0,0)
+    to [short](-2,0) to [american voltage source, invert, -*](-2,3)
+    node [above, color = red]{$V_f$}
+    to [R, l^=$R_2$] (2,3) node [above, color = red]{$V_R$} to [R, l=$R$, f>_=$i_R$,*-] (2,0)
+    to [short] (0,0);
+    
+}{Circuito B}{circ_B}    
+\end{minipage}
+
+\vspace{.2cm}
+\noindent
+\subsection{Para o circuito A, determine a tensão $V_R$ e a corrente $i_R$ esperadas sobre o resistor $R = 100\ohm$ para valores de tensão $V_f$
+iguais a 3 V, 5 V e 10 V.}
+
+\begin{itemize}
+    \item Abra o QUCS, vá em Main Dock e crie um novo
+    projeto.
+\end{itemize}
+
+\figuras{.4}{imagens/sim/new_project}{Criação de um novo projeto.}{new_project} 
+
+\begin{itemize}
+    \item Na aba Componentes, vá em componentes
+    agrupados e coloque três resistores no esquemático.
+    Vá em Fontes e coloque três fontes de tensão DC. Vá
+    em Ponteiras e coloque três amperímetros.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+
+    \subfiguras{.3}{.8}{imagens/sim/dc_source}{}{} 
+    \subfiguras{.3}{.8}{imagens/sim/curr_prove}{}{} 
+    \subfiguras{.3}{.8}{imagens/sim/res_ins}{}{} 
+\end{figure}
+
+\begin{itemize}
+    \item Conecte os componentes sem esquecer da
+    referência do terra e ajuste seus valores para os
+    pedidos no exercício. Nomeie os nós para mediar a tensão $V_R$.
+\end{itemize}
+\figura{.6}{imagens/sim/label_item}
+\figuras{.4}{imagens/sim/circuito1}{Cirucito a ser montado no Qucs}{circ_1}
+
+\begin{itemize}
+    \item Clique duas vezes na fonte de tensão. No valor de tensão insira o nome "Tensao" para que possa ser usado no parâmetro de varredura posteriormente.
+\end{itemize}
+\figuras{.4}{imagens/sim/nome_source}{Inserção da variável de varredura.}{var_sweep} 
+
+\begin{itemize}
+    \item Na aba simulações, insira a simulação DC e a simulação por varredura. 
+\end{itemize}
+\figuras{.3}{imagens/sim/ins_sim}{Inserção da simulação DC e da simulação por varredura.}{ins_sim1}
+
+\begin{itemize}
+    \item Configure as propriedades da simulação por varredura para o modo lista ("list"), o parâmetro de varredura ("Parameter Sweep") deve ser o mesmo atribuído à fonte de tensão, "Tensao". Os valores ("Values") devem ser 3V, 5V e 10V, como exigido pelo exercício.
+\end{itemize}
+\figuras{.4}{imagens/sim/swep_param}{Configuração dos parâmetros de varredura.}{} 
+
+\begin{itemize}
+    \item Salve e simule. Insira uma tabela para verificar os valores.
+\end{itemize}
+\figura{1}{imagens/sim/save_sim} 
+\figuras{.3}{imagens/sim/ins_diagram}{Iserção de uma tabela.}{}
+
+\begin{itemize}
+    \item Insira os valores de $V_R$ e $i_R$ na tabela.
+\end{itemize}
+\figuras{.5}{imagens/sim/diagram_param}{Parâmetros da tabela.}{} 
+
+\begin{itemize}
+    \item Assim, verifica-se os valores exigidos pelo exercício.
+\end{itemize}
+
+\figuras{1}{imagens/sim/final1}{Resultado esperado pelo exercício.}{} 
+
+\subsection{Repita os cálculos para o circuito B, considerando $R_2 = 50 \ohm$.}
+
+\begin{itemize}
+    \item Abra um novo esquemático.
+\end{itemize}
+\figuras{.5}{imagens/sim/new_sch}{Criação de um novo esquemático.}{} 
+
+\begin{itemize}
+    \item Na aba Componentes, vá em componentes
+    agrupados e coloque seis resistores no esquemático.
+    Vá em Fontes e coloque três fontes de tensão DC no
+    esquemático. Vá em Ponteiras e coloque três
+    amperímetros no esquemático.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+
+    \subfiguras{.3}{.8}{imagens/sim/dc_source}{}{} 
+    \subfiguras{.3}{.8}{imagens/sim/curr_prove}{}{} 
+    \subfiguras{.3}{.8}{imagens/sim/res_ins}{}{} 
+\end{figure}
+
+\begin{itemize}
+    \item Conecte os componentes sem esquecer da
+    referência do terra e ajuste seus valores para os
+    pedidos no exercício como na figura abaixo. Insira, também, um nome para o nó referente à $V_f$.
+\end{itemize}
+
+\figura{.5}{imagens/sim/label_item}
+\figuras{.4}{imagens/sim/circuito2}{Circuito B a ser montado.}{}
+
+\begin{itemize}
+    \item Clique duas vezes na fonte de tensão. No valor de tensão insira o nome "Tensao" para que possa ser usado no parâmetro de varredura posteriormente.
+\end{itemize}
+
+\figuras{.5}{imagens/sim/nome_source}{Nomeação da variável de varredura.}{} 
+
+\begin{itemize}
+    \item Na aba simulações, insira a simulação DC e a simulação por varredura. 
+\end{itemize}
+
+\figuras{.3}{imagens/sim/ins_sim}{Inserção dos componentes de simulação.}{} 
+
+\begin{itemize}
+    \item Configure as propriedades da simulação por varredura para o modo lista ("list"), o parâmetro de varredura ("Parameter Sweep") deve ser o mesmo atribuído à fonte de tensão, "Tensao". Os valores ("Values") devem ser 3V, 5V e 10V, como exigido pelo exercício.
+\end{itemize}
+
+\figuras{.5}{imagens/sim/swep_param_2}{Parâmetros para a varredura.}{} 
+
+\begin{itemize}
+    \item Salve e simule. Insira uma tabela para verificar os valores.
+\end{itemize}
+
+
+\figura{1}{imagens/sim/save_sim}
+\figuras{.3}{imagens/sim/ins_diagram}{Inserção de uma tabela.}{} 
+\begin{itemize}
+    \item Insira os valores de $V_R$ e $i_R$ na tabela.
+\end{itemize}
+
+\figuras{.5}{imagens/sim/diagram_param}{Configuração dos valores da tabela.}{} 
+
+\begin{itemize}
+    \item Assim, verifica-se os valores exigidos pelo exercício.
+\end{itemize}
+
+\figuras{1}{imagens/sim/final2}{Resultado esperado pelo exercício.}{} 
+
+\newpage
+
+\subsection{Ainda para o circuito B, faça $V_f = 10 V$ e calcule os valores de corrente fornecidos pela fonte se $R_2$ for um resistor de: $1 k\ohm$,
+$500 \ohm$, $200 \ohm$, $100 \ohm$ e $50 \ohm$.}
+
+\begin{itemize}
+    \item Vá em Arquivo $\rightarrow$ Salvar como... e mude o nome do
+    arquivo para utilizar o esquemático já montado para
+    a segunda parte da simulação do Circuito B.
+
+    \item Modifique a fonte de tensão para o valor de 10V, como mostrado abaixo.
+\end{itemize}
+
+\figuras{.4}{imagens/sim/circuito3}{Circuito a ser montado.}{}
+
+\begin{itemize}
+    \item Clique duas vezes no resistor $R_1$. Mude o valor de resistência para o nome "Resistor", como abaixo:
+\end{itemize}
+
+\figuras{.6}{imagens/sim/swep_var_res}{Definição da variável de varredura.}{}
+
+\begin{itemize}
+    \item Configure as propriedades da simulação por varredura para o modo lista ("list"), o parâmetro de varredura ("Parameter Sweep") deve ser o mesmo atribuído ao nome do resistor $R_1$, "Resistor". Os valores ("Values") devem ser 1 kOhm,
+    500 ohm, 200 ohm, 100 ohm e 50 ohm, como exigido pelo exercício.
+\end{itemize}
+
+\figuras{.5}{imagens/sim/swep_param_3}{Configuração dos parâmetros da simulação por varredura.}{}
+
+
+\begin{itemize}
+    \item Salve e simule. Assim verifica-se os valores exigidos pelo exercício.
+\end{itemize}
+
+\figura{1}{imagens/sim/save_sim}
+\figuras{.8}{imagens/sim/final3}{Resultado esperado pelo exercício.}{}

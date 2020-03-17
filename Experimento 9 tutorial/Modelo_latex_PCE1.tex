@@ -1,0 +1,101 @@
+\documentclass[10pt]{article}
+\usepackage[portuguese]{babel}
+\usepackage[a4paper, top = 0.8in, bottom = 0.9in, left =0.6in, right = 0.6in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{wrapfig}
+\usepackage{circuitikz}
+\usepackage{titlesec}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{ragged2e}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{amsmath, mathtools, amssymb}
+\usepackage{parskip}
+\usepackage{array, makecell}
+\usepackage{booktabs}
+\titleformat{\section}
+{\normalfont\large\bfseries}{\thesection)}{1em}{}
+\titleformat{\subsection}
+{\normalfont\normalsize\bfseries}{\thesubsection)}{1em}{}
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsection)}{1em}{}
+
+
+%\pretitle{\begin{center}\Huge\bfseries}
+
+\pagestyle{fancy}
+\fancyhead{}
+\centering\chead{\includegraphics[width=15cm]{imagens/unb_fga_logo_extenso.jpg}}
+\lfoot{Prática de Circuitos 1 - 2019/1}
+\rfoot{\textbf{Prof. Dr. Marcus V. Chaffim Costa}} %nome do rodape
+\renewcommand{\footrulewidth}{1pt}
+
+\setlength{\parskip}{0.1cm}
+\author{Monitoria - 2019/2}
+\title{Protocolo experimental 06}
+
+
+%arrumação das tabelas
+
+\setlength{\tabcolsep}{0.5em} % for the horizontal padding
+{\renewcommand{\arraystretch}{1.2}}% for the vertical padding
+\captionsetup[table]{name= \bfseries Tabela}
+\numberwithin{table}{section}
+\usepackage{array}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+\aboverulesep=0cm
+\belowrulesep=0cm
+
+%configuracoes dos codigos em matlab
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+
+\lstset{language=Matlab,%
+    %basicstyle=\color{red},
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{black}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+}
+
+\allowdisplaybreaks
+
+
+\begin{document}
+
+\begin{center}
+\vspace*{.03cm}
+\Large\textbf{Experimento 9:}\\ %titulo
+\Large{Circuitos com Amplificador Operacional}
+\end{center}
+\justify
+\input{questoes_pre_laboratoriais}
+\input{circuitos_integrados.tex}
+\input{efeitos_limitadores.tex}
+\input{impedancias.tex}
+\input{simulacoes.tex}
+\input{Experimento.tex}
+\input{folha_de_dados.tex}
+
+
+\end{document}

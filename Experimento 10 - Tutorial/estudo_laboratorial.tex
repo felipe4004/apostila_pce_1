@@ -1,0 +1,65 @@
+\section{Estudo pré-laboratorial}
+
+\begin{minipage}{.5\textwidth}
+
+
+\begin{figure}[H]
+
+	\centering
+	
+    \begin{circuitikz}[line width = .5pt, scale = .8, transform shape]
+        \draw
+            (0,0) node [op amp] (opamp) {}
+		
+		(opamp.-) to [short] ($(opamp.-)+(0,1)$) to [C, l_= C]  ($(opamp.-)+(-2.8,1)$) to [R, l_=$R_c$] ($(opamp.-)+(-4,1)$) to [short, -o] ($(opamp.-)+(-5,1)$) node [left]{$V_{in}(t)$}
+		(opamp.-) to [short, -*] ($(opamp.-)+(0,1)$)
+		to [R, l^=R] ($(opamp.-)+(2,1)$) -| (opamp.out) to [short, *-o] ($(opamp.out)+(1,0)$)
+		node [right] {$V_{out}(t)$}
+
+		(opamp.+) to [short] ($(opamp.+)+(0,-1)$) node [ground]{}		
+		;
+		
+        
+    \end{circuitikz}
+    \caption{Circuito amplificador-diferenciador}
+    \label{fig:diferenciador}
+\end{figure}
+\centering
+	\begin{equation}\label{eqn:diff}
+		V_{out}(t) = -RC\dfrac{dV_{in}(t)}{dt}
+	\end{equation}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+
+\begin{figure}[H]
+\centering
+\begin{circuitikz}[line width = .5pt, scale = .8, transform shape]
+
+\draw
+
+	(0,0) node [op amp] (opamp) {}
+	
+	($(opamp.-)+(-3,1)$) node [left] {$V_{in}(t)$} 
+	to [R, l^= $R$, o-*] ($(opamp.-)+(0,1)$) -| (opamp.-)
+	
+ 	|- ($(opamp.-)+(0,1)$) coordinate (leftC) 
+ 	to [C, l^=C] (leftC -| opamp.out) -| (opamp.out)
+ 	to [short, *-o] ($(opamp.out)+(1,0)$) node [right] {$V_{out}(t)$}
+ 	
+ 	(opamp.+) to [short] ($(opamp.+)+(0,-1)$) node [ground] {} 
+	;
+	
+	\draw  [densely dashed] ($(opamp.-)+(0,1)$) -- ($(opamp.-)+(0,2.5)$); 
+	\draw	($(opamp.-)+(0,2.5)$) to [R, l^=$R_0$] ($(opamp.-)+(2,2.5)$);
+	\draw	($(opamp.-)+(2,2.5)$)[densely dashed]-| (opamp.out){};
+
+\end{circuitikz}
+	
+	\caption{Circuito amplificador-integrador}
+    \label{fig:integrador}
+\end{figure}
+
+	\begin{equation}\label{eqn:int}
+		V_{out}(t) = -\dfrac{1}{RC}\displaystyle{\int_{0}^t V_{in}(\tau)d\tau + k}
+	\end{equation}
+\end{minipage}

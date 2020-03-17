@@ -1,0 +1,19 @@
+\section{Efeitos limitadores dos amplificadores operacionais}
+
+O conhecimento de uma série de parâmetros dos amplificadores operacionais reais são determinísticos para a compreensão do seu desempenho. O fio abaixo mostra os principais deles:
+
+\begin{itemize}
+    \item \textbf{Ganho Finito:} é a relação do ganho de tensão na saída em relação a entrada, a partir da variação de tensão nos terminais positivo e negativo do amplificador operacional. Desse modo, nós obtemos a relação $A(V^+ - V^-)=V_o$, onde A caracteriza o ganho, podendo chegar a casa de dezenas de milhares de unidades.
+    
+    \item \textbf{Impedância de entrada finita:} o modelo ideal de amplificador operacional assume que temos corrente zero passando pelos terminais. Entretanto, essa impedância de entrada é limitada quando medido a resistência de um dos terminais com o outro aterrado, ainda que esta seja na casa dos milhões de Ohms.
+    
+    \item \textbf{Tensão de \emph{offset} de entrada:} devido as diferenças mínimas de fabricação de cada componente do amplificador operacional, a saída do amplificador operacional não obedecerá o modelo ideal, \textit{i.e.}, terá sua saída com tensão diferente de zero. Pode-se perceber esse efeito ao aterrar ambas as entradas do amplificador operacional e medir a sua saída. Geralmente, esse \emph{offset} é ignorado por ser quase insignificante em alguns casos.
+    
+    \item \textbf{Lagura de banda finita:} os amplificadores operacionais possuem uma resposta em frequência do tipo passa-baixa. O efeito é causado principalmente por conta dos capacitores envolvidos no circuito do amplificador, fazendo com que a amplitude do sinal de saída diminua a partir das faixas mais altas de frequência.
+    
+    \item \textbf{Capacitância de entrada:} é a capacitância oferecida pelo amplificador operacional real, diferindo do modelo ideal que é zero. Ela é a responsável pelo comportamento do circuito em frequências altas.
+    
+    \item \textbf{Saturação:} A tensão de saída é limitada inferior e superiormente por um limiar de saturação, que é atingido um pouco antes dos valores de alimentação do amplificador operacional. Esse limiar é definido no projeto quando configurado as tensões de alimentação \cite{dorf}.
+    
+    \item \textbf{\emph{Slew-rate}:} é a taxa em que a tensão de saída consegue variar em $\mu s$ em relação a entrada. A imperfeição se deve aos condensadores presentes no componentes, uma vez que a resposta em frequência da tensão dos capacitores não é imediata.
+\end{itemize}

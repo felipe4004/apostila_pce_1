@@ -1,0 +1,401 @@
+\section{Estudo pré-laboratorial}
+
+\subsection{Utilizando as Leis de Kirchhoff, resolva os circuitos A e B (Figuras \ref{circ:circ_a} e \ref{circ:circ_b}. Você deverá determinar as tensões elétricas
+nos pontos indicados em função das fontes e dos valores de resistores. Obtenha ainda as correntes em $\mathbf{R_1}$ e $\mathbf{R_4}$ para cada caso.}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[H]{.4\textwidth}
+        \centering
+        \begin{circuitikz}[line width=.5pt, american currents, scale = .8, transform shape]
+            \draw 
+
+            (0,0) node [ground] {} to [I, l = $I_1$, -*] (0,2) node [above] {A}
+            to [R, l = $R_1$] (3,2) node [above] {B} to [R, l = $R_2$, *-] (3,0) to [short, *-*] (0,0)
+            ;
+            \draw 
+            (3,0) to [R, l = $R_4$] (6,0) to [I, l_= $I_2$, *-*] (6,2) node [above] {C}
+            to [R, l_= $R_3$] (3,2)
+            ;
+
+        \end{circuitikz}
+        \caption{Circuito A}
+        \label{circ:circ_a} 
+    \end{subfigure}
+    \begin{subfigure}[H]{.55\textwidth}
+        \centering
+        \begin{circuitikz}[line width=.5pt, american voltages, scale = .8, transform shape]
+            \draw 
+
+            (0,0) node [ground] {} to [V, l = $V_1$, -*, invert] (0,2) node [above] {A}
+            to [R, l = $R_1$] (3,2) node [above] {B} to [R, l = $R_2$, *-] (3,0) to [short, *-*] (0,0)
+            ;
+            \draw 
+
+            (3,2) to [V, invert, l = $V_2$] (5,2) to [R, l = $R_3$] (7,2)  node [above] {C} to [R, l = $R_5$] (10,2) node [above] {D} to [R, l= $R_6$,*-] (10,0) -- (7,0) to [R, l= $R_4$,-*] (7,2)
+            ;
+            \draw (3,0) to [short, -*] (7,0);
+        \end{circuitikz}
+        \caption{Circuito B}
+        \label{circ:circ_b} 
+    \end{subfigure}
+    \caption{Circuitos com fontes de corrente e fontes de tensão independentes.}
+    \label{fig:circ_b}
+\end{figure}
+
+
+
+
+Aplicando a Lei de Kirchhoff para Tensões (LKT) ao circuito A, tem-se
+\begin{equation}
+    I_3 = I_1 + I_2
+\end{equation}
+
+onde $I_3$ é definido como a tensão que sai do nó B e passa pelo $R_2$, como abaixo:
+
+\begin{figure}[H]
+    \centering
+    \begin{circuitikz}[line width=.5pt, american currents, scale = .8, transform shape]
+        \draw 
+
+        (0,0) node [ground] {} to [I, l = I1, -*] (0,2) node [above] {A}
+        to [R, l = $R_1$] (3,2) node [above] {B} to [R, l = $R_2$, *-*, v = $I_3$, color = red] (3,0) to [short, *-*] (0,0)
+        ;
+        \draw 
+        (3,0) to [R, l = $R_4$] (6,0) to [I, l_= I2, *-*] (6,2) node [above] {C}
+        to [R, l_= $R_3$] (3,2)
+        ;
+
+    \end{circuitikz}
+\end{figure}
+
+Desse modo, define-se
+\begin{align}
+    \dfrac{V_A-V_B}{R_1}= I1 && \dfrac{V_C-V_B}{R_3}=I2 && \dfrac{V_B-0}{R_2}=I3 && \dfrac{0-V_D}{R_4}=I2
+\end{align}
+
+Isolando as tensões em função das fontes e dos valores dos resistores, encontra-se:
+
+\begin{gather}
+    -\dfrac{V_D}{R_4}=I_2 \rightarrow V_D=-I_2R_4\\
+    \dfrac{V_B}{R_2}=I_3 \rightarrow V_B = I_3R_2 = (I_1 + I_2) R_2\\
+    V_C - V_B = I_2R_3 \rightarrow V_C = I_2R_3 + V_B = I_2R_3 + (I_1 +I_2)R_2\\
+    V_A-V_B = I_1R_1 \rightarrow V_A = I_1R_1 + V_B = I_1R_1 +  (I_1+I_2)R_2
+\end{gather}
+
+Tem-se, portanto, a seguinte configuração
+
+\begin{align}
+    V_A = I_1R_1 + (I_1+I_2)R_2 && V_B = (I_1 + I_2)R_2 && V_C=I_2R_3 + (I_1+I_2)R_2 && V_D = -I_2R_4
+\end{align}
+
+As correntes em $R_1$ e $R_4$ são, respectivamente, $I_1$ e $I_2$. 
+
+Utilizando a mesma estratégia de resolução para o circuito B, tem-se
+
+\begin{gather}
+    A: V_A = V_1\\
+    B: \dfrac{V_B-V_1}{R_1} + \dfrac{V_B}{R_2} + \dfrac{V_B+V_2-V_C}{R_3}=0\\
+    C: \dfrac{V_C-V_D}{R_5} + \dfrac{V_C}{R_4} + \dfrac{V_C - V_2 - V_B}{R_3} =0\\
+    D: \dfrac{V_D-V_C}{R_5}+ \dfrac{V_D}{R_6}=0
+\end{gather}
+
+Isolando as tensões em função das fontes e dos
+valores de resistores, encontra-se os seguintes valores:
+
+\begin{gather}
+    B: \left[\dfrac{1}{R_1}+\dfrac{1}{R_2}+\dfrac{1}{R_3}\right]V_B + \left[-\dfrac{1}{R_3}\right]V_C = \dfrac{V_1}{R_1}-\dfrac{V_2}{R_3}\\
+    C: \left[-\dfrac{1}{R_3}\right]V_B + \left[\dfrac{1}{R_3}+ \dfrac{1}{R_4} + \dfrac{1}{R_5} \right]V_C + \left[\dfrac{-1}{R_5}\right]V_D = \dfrac{V_2}{R_3}\\
+    D: \left[-\dfrac{1}{R_5}\right]V_C + \left[\dfrac{1}{R_5}+\dfrac{1}{R_6} \right]V_D = 0
+\end{gather}
+
+\subsection{Utilize o método nodal para calcular as tensões e o método dos laços para calcular as correntes em todos os resistores do
+circuito C (Figura \ref{circ: circ_c})}
+
+\begin{figure}[H]
+    \centering
+        \begin{circuitikz}[line width=.5pt, american voltages, scale = .8, transform shape]
+            \draw
+            (0,0) node [ground] {} to [V, l = $V_1$, invert, *-] (0,4)
+            to [R, l = $R_1$, -*] (2,4) -- (4,4) to [R, l = $R_4$] (4,2)
+            to [R, l = $R_3$] (4,0) -- (0,0)
+            ;
+            \draw
+            (2,4) to [R, l_= $R_2$] (2,2) to [R, l_= $R_5$, -*] (2,0)
+            ; 
+            \draw 
+            (2,2) to [R, l = $R_6$, *-*] (4,2)
+            ;
+            \draw (2,4) node [above] {A};
+            \draw (2,0) node [below] {B};
+        
+        \end{circuitikz}    
+    \caption{Circuito C}
+    \label{circ: circ_c}
+\end{figure}
+
+Adicioná-se-a, para facilitação dos cálculos, a inserção de dois nós, C e D, como visto abaixo:
+
+\begin{minipage}{.4\textwidth}
+    \begin{figure}[H]
+        \centering
+            \begin{circuitikz}[line width=.5pt, american voltages, scale = .8, transform shape]
+                \draw
+                (0,0) node [ground] {} to [V, l = $V_1$, invert, *-] (0,4)
+                to [R, l = $R_1$, -*] (2,4) -- (4,4) to [R, l = $R_4$] (4,2)
+                to [R, l = $R_3$] (4,0) -- (0,0)
+                ;
+                \draw
+                (2,4) to [R, l_= $R_2$] (2,2) to [R, l_= $R_5$, -*] (2,0)
+                ; 
+                \draw 
+                (2,2) to [R, l = $R_6$, *-*] (4,2)
+                ;
+                \draw (2,4) node [above] {A};
+                \draw (2,0) node [below] {B};
+                \draw (2,2) node [left, color = red] {\bfseries C};
+                \draw (4,2) node [right, color = red] {\bfseries D};
+            
+            \end{circuitikz}    
+        \caption{Circuito C}
+        \label{circ: circ_c_tuto}
+    \end{figure}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\begin{gather}
+    B: V_B=0\\
+    A: \dfrac{V_A-V_1}{R_1} + \dfrac{V_A - V_C}{R_2} + \dfrac{V_A-V_D}{R_4}=V_1\\
+    C: \dfrac{V_C-V_A}{R_2} + \dfrac{V_C}{R_5} + \dfrac{V_C - V_D}{R_6} = 0\\
+    D: \dfrac{V_D - V_A}{R_4} + \dfrac{V_D - V_C}{R_6} + \dfrac{V_D}{R_3}=0
+\end{gather}
+\end{minipage}
+
+
+
+Isolando as tensões em função das fontes e dos valores de resistores, encontra-se os seguintes valores:
+
+\begin{gather*}
+    \left[\dfrac{1}{R_1} + \dfrac{1}{R_2} + \dfrac{1}{R_4} \right]V_A + \left[-\dfrac{1}{R_2} \right]V_C + \left[-\dfrac{1}{R_4}\right]V_D = \dfrac{V_1}{R_1}\\
+    \left[-\dfrac{1}{R_2}\right]V_A + \left[\dfrac{1}{R_2} + \dfrac{1}{R_5} + \dfrac{1}{R_6}\right]V_C + \left[-\dfrac{1}{R_6}\right]V_D = 0\\
+    \left[-\dfrac{1}{R_4}\right]V_A + \left[\dfrac{-1}{R_6}\right]V_C + \left[\dfrac{1}{R_3} + \dfrac{1}{R_4}+\dfrac{1}{R_6}\right]V_D=0
+\end{gather*}
+
+Utilizando o método das malhas para calcular as correntes, temos
+
+\begin{minipage}{.4\textwidth}
+    \begin{figure}[H]
+        \centering
+            \begin{circuitikz}[line width=.5pt, american voltages, scale = .8, transform shape]
+                \draw
+                (0,0) node [ground] {} to [V, l = $V_1$, invert, *-] (0,4)
+                to [R, l = $R_1$, -*] (2,4) -- (4,4) to [R, l = $R_4$] (4,2)
+                to [R, l = $R_3$] (4,0) -- (0,0)
+                ;
+                \draw
+                (2,4) to [R, l_= $R_2$] (2,2) to [R, l_= $R_5$, -*] (2,0)
+                ; 
+                \draw 
+                (2,2) to [R, l = $R_6$, *-*] (4,2)
+                ;
+                \draw (2,4) node [above] {A};
+                \draw (2,0) node [below] {B};
+                \draw (1,2) node[scale=3]{$\circlearrowright$};
+                \draw (3,3.1) node[scale=3]{$\circlearrowright$};
+                \draw (3,1) node[scale=3]{$\circlearrowright$};
+                \draw (1,2) node [color=red] {$I_1$};
+                \draw (3,3.1) node [color=red] {$I_2$};
+                \draw (3,1) node [color=red] {$I_3$};
+            
+            \end{circuitikz}    
+        \caption{Circuito C método das malhas.}
+        \label{circ: circ_c_tuto2}
+    \end{figure}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+    \begin{equation*}
+        \begin{cases}
+            R_1+(I_1 + I_2)R_2 + (I_1 - I_3)R_5 = 10\\
+            R_4 I_2 + (I_2 - I_3)R_6 + (I_2 - I_1)R_2 = 0\\
+            R_3 I_3 + (I_3-I_1)R_5 + (I_3 - I_2)R_6 = 0
+        \end{cases}
+    \end{equation*}
+
+    \begin{equation*}
+        \begin{cases}
+            [R_1 + R_2 + R_5]I_1 + [- R_2]I_2 + [-R_5]I_3 = 10\\
+            [-R_2]I_1+ [R_2 +R_4 +R_6]I_2 + [-R_6]I_3 = 0\\
+            [-R_5]I_1 + [-R_6]I_2+ [R_3+R_5+R_6]I_3  
+        \end{cases}
+    \end{equation*}
+    
+\end{minipage}
+
+
+
+\subsection{Obtenha uma fórmula para a resistência equivalente entre os pontos A e B do circuito C. Dica: retire do circuito a fonte de
+alimentação e o resistor R1. Em seguida, utilize uma conversão entre associação delta (triângulo) para estrela.}
+
+Eliminando a fonte e o resistor $R_1$ tem-se a seguinte configuração
+
+\begin{figure}[H]
+    \centering
+        \begin{circuitikz}[line width=.5pt, american voltages, scale = .8,transform shape]
+            \draw
+                (0,4) to [short, o-] (4,4) to [R, l = $R_4$] (4,2)
+                to [R, l = $R_3$] (4,0) to [short, -o] (0,0)
+                ;
+                \draw
+                (2,4) to [R, l_= $R_2$, *-] (2,2) to [R, l_= $R_5$, -*] (2,0)
+                ; 
+                \draw 
+                (2,2) to [R, l = $R_6$, *-*] (4,2)
+                ;
+                \draw (0,4) node [left] {A};
+                \draw (0,0) node [left] {B};
+            
+        \end{circuitikz}    
+        \caption{Circuito C, exceto o resistor $R_1$ e a fonte de alimentação.}
+        \label{circ: circ_c_tuto3}
+\end{figure}
+
+Aplicando a tranformação Delta-Estrela, tem-se:
+
+\begin{align}
+    R_A=\dfrac{R_2 + R_4}{R_2 \cdot R_4 \cdot R_6} && R_C=\dfrac{R_2 + R_6}{R_2 \cdot R_4 \cdot R_6} && R_D=\dfrac{R_4 + R_6}{R_2 \cdot R_4 \cdot R_6}
+\end{align}
+
+Obtendo,
+
+\begin{figure}[H]
+    \centering
+        \begin{circuitikz}[line width=.5pt, american voltages, scale = .8,transform shape]
+            \draw
+                (0,4) to [short, o-] (4,4) to [R, l = $R_A$, -*] (4,2)
+                to [R, l = $R_D$] (6,2) to [R, l= $R_3$] (6,0) to [short, -o] (0,0)
+                ;
+                \draw
+                (4,2) to [R, l = $R_C$] (2,2) to [R, l_= $R_5$, -*] (2,0)
+                ; 
+                \draw (0,4) node [left] {A};
+                \draw (0,0) node [left] {B};
+            
+        \end{circuitikz}    
+        \caption{Circuito C, exceto o resistor $R_1$ e a fonte de alimentação.}
+        \label{circ: circ_c_tuto4}
+\end{figure}
+
+Fazendo a associação em série dos resistores inferiores, temos
+
+
+\begin{minipage}{.5\textwidth}
+    \begin{figure}[H]
+        \centering
+            \begin{circuitikz}[line width=.5pt, american voltages, scale = .8,transform shape]
+                \draw
+                    (0,4) to [short, o-] (3,4) to [R, l = $R_A$, -*] (3,2)
+                    to [R, l = $R_8$] (4,0) to [short, -o] (0,0)
+                    ;
+                    \draw
+                    (3,2) to [R, l_= $R_7$, -*] (2,0)
+                    ; 
+                    \draw (0,4) node [left] {A};
+                    \draw (0,0) node [left] {B};
+                
+            \end{circuitikz}    
+            \caption{Circuito C, exceto o resistor $R_1$ e a fonte de alimentação.}
+            \label{circ: circ_c_tuto4}
+    \end{figure} 
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+    \begin{equation}
+        \begin{gathered}
+            R_7 = R_C + R_5\\
+            R_8 = R_D + R_3
+        \end{gathered}   
+    \end{equation}
+\end{minipage}
+
+
+Fazendo-se uma associação em paralelo entre $R_7 \, \text{e} \, R_8$, tem-se
+
+\begin{minipage}{.4\textwidth}
+    \begin{figure}[H]
+        \centering
+            \begin{circuitikz}[line width=.5pt, american voltages, scale = .8,transform shape]
+                \draw
+                    (0,4) to [short, o-] (3,4) to [R, l = $R_A$, -*] (3,2)
+                    to [R, l = $R_9$] (3,0) to [short, -o] (0,0)
+                    ; 
+                    \draw (0,4) node [left] {A};
+                    \draw (0,0) node [left] {B};
+                
+            \end{circuitikz}    
+            \caption{Circuito C, exceto o resistor $R_1$ e a fonte de alimentação.}
+            \label{circ: circ_c_tuto4}
+    \end{figure}
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+    \begin{gather}
+        R_9 = \dfrac{R_7 + R_8}{R_7 \cdot R_8}
+    \end{gather}
+    
+\end{minipage}
+
+que, por uma simples associação em série, culmina em:
+
+\begin{minipage}{.5\textwidth}
+    \begin{figure}[H]
+        \centering
+            \begin{circuitikz}[line width=.5pt, american voltages, scale = .8,transform shape]
+                \draw
+                    (0,4) to [short, o-] (3,4) to [R, l = $R_{eq}$] (3,0) to [short, -o] (0,0)
+                    ; 
+                    \draw (0,4) node [left] {A};
+                    \draw (0,0) node [left] {B};
+                
+            \end{circuitikz}    
+            \caption{Circuito C, exceto o resistor $R_1$ e a fonte de alimentação.}
+            \label{circ: circ_c_tuto4}
+    \end{figure}
+\end{minipage}
+\begin{minipage}{.4\textwidth}
+    \begin{gather}
+        R_{eq}= R_A + R_9
+    \end{gather}
+\end{minipage}
+
+\subsection{Fazendo $\mathbf{R_2 = R_3}$ e $\mathbf{R_4 = R_5}$ no circuito C, determine quais modificações deveriam ser feitas no layout do circuito, sem
+modificar os valores dos componentes utilizados, para que a tensão se anule sobre o resistor $\mathbf{R_6}$ (ou seja, para obter uma
+configuração análoga a uma Ponte de Wheatstone). Dica: faça $\mathbf{i_{R6}}$ igual a zero em suas equações e verifique a relação que
+surge entre os resistores restantes.}
+
+Observando a relação final obtida pelo método dos nós e eliminando as correntes que passam pelo resistor $R_6$, tem-se
+
+
+\begin{gather*}
+    \left[-\dfrac{1}{R_2}\right]V_A + \left[\dfrac{1}{R_2} + \dfrac{1}{R_5} + \cancel{\dfrac{1}{R_6}}\right]V_C + \cancel{\left[-\dfrac{1}{R_6}\right]}V_D = 0\\
+    \left[-\dfrac{1}{R_4}\right]V_A + \left[\cancel{\dfrac{-1}{R_6}}\right]V_C + \left[\dfrac{1}{R_3} + \dfrac{1}{R_4}+\cancel{\dfrac{1}{R_6}}\right]V_D=0
+\end{gather*}
+
+Facilmente, pode-se perceber que os nós C e D são bastante similares diferenciando-se apenas em relação aos resistores. A passagem de corrente depende da diferença de potencial elétrico entre dois pontos de um circuito. Logo, para que não haja passagem de corrente no resistor $R_6$, necessita-se que $V_C$ e $V_D$ sejam iguais. 
+
+Portanto, apenas permutar a posição de $R_3$ e $R_4$ faz com que a corrente sobre $R_6$ seja zero.
+
+\subsection{Simule os circuitos A, B e C (Figuras 2.1a, 2.1b e 2.2) e obtenha os valores correspondentes de tensão e corrente usando o
+QUCS 0.0.19. Inclua no estudo pré-laboratorial os desenhos do circuito simulado juntamente com as medições realizadas. Para
+os circuitos das Figuras 2.1a e 2.1b, assuma $\mathbf{R_1 = R_4 = 2,2k\ohm}$, $\mathbf{R_2 = R_6 = 1k\ohm}$, $\mathbf{R_3 = R_5 = 4,7k\ohm}$, $\mathbf{V_1 = 12V}$, $\mathbf{V_2 = 20V}$,
+$\mathbf{I_1 = 12mA}$ e $\mathbf{I_2 = 20mA}$. Para o circuito da Figura 2.2, assuma $\mathbf{R_1 = 2,2k\ohm}$, $\mathbf{R_2 = R_3 = 1k\ohm}$, $\mathbf{R_4 = R_5 = 4,7k\ohm}$, $\mathbf{R_6 =
+100\ohm}$ e $\mathbf{V_1 = 10V}$. Em seguida, substitua os mesmos valores nas fórmulas encontradas nos itens 2.1 e 2.2. Complete as
+tabelas a seguir com seus resultados teóricos e simulados.}
+
+Assumiu-se $R_1 = R_4 = 2,2k\ohm$, $R_2 = 1k\ohm$, $R_3 = 4,7k\ohm$, $I_1 = 12mA$ e $I_2 = 20mA$. Em seguida, substituiu-se os mesmos valores nas fórmulas encontradas para verificar os
+cálculos:
+
+\begin{gather*}
+    V_A = 12mA\cdot 2,2k\ohm + (12mA + 20 mA)\cdot 1k\ohm = 58,4V\\
+    V_B = (12mA + 20mA)1k\ohm = 32V\\
+    V_C = 12mA\cdot 4,7k\ohm + (12mA + 20mA)\cdot 1k\ohm = 126V\\
+    V_D = -20mA \cdot 2,2 k\ohm = -44V
+\end{gather*}
+
+Portanto

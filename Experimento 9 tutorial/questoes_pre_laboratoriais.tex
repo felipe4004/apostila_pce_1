@@ -1,0 +1,245 @@
+\section{Questões pré-laboratoriais}
+Considere os circuitos com amplificador operacional mostrados na Figura \ref{fig1}.
+
+\begin{figure}[H]
+	\begin{subfigure}{.33\textwidth}
+		\begin{adjustbox}{width=1\textwidth}
+  			\begin{circuitikz}[line width=.5pt]
+  				\draw
+  				(0, 0) node[op amp] (opamp) {}
+        		(opamp.-) to[R , l^= $R_1$,-o] (-4, 0.5)node [left]{$V_1$}
+        		(opamp.-) |- (-1, 2) to[R, l= $R_2$] (1, 2) -| (opamp.out)
+        		to [short, -o] ($(opamp.out) + (.5,0)$)
+        		($(opamp.out) + (.5,0)$) node [right] {$V_o$}
+        
+        (opamp.+)to [short] ($(opamp.+)+(0,-1)$) node [ground] {}
+        
+        ;
+        
+   			 \draw  (opamp.-) to[short,*-] ++(0,0);    
+   			 \draw  (opamp.out) to[short,-*] ++(0,0);
+  				
+  			\end{circuitikz}
+  			\end{adjustbox}
+  		\caption{Circuito A}
+		\label{fig:sfig1}
+		\end{subfigure}
+		\begin{subfigure}{.33\textwidth}
+			\begin{adjustbox}{width=1\textwidth}
+			\begin{circuitikz}[line width=.5pt] \draw
+		(0,0) node [op amp] {}
+		(-4.7,1.5) node [right] {$V_1$}
+		(-4.7,.5) node [right] {$V_2$}
+		(-4.7,-.5) node [right] {$V_3$}
+		(-4, 1.5)	to [R, l=$R_1$,  o-] (-2,1.5)
+			to [short] (-2,-.5)
+		(-4, .5)	to [R, l=$R_3$, o-] (-2,.5)
+		(-4, -.5)	to [R, l=$R_4$, o-] (-2,-.5)	
+			to [short, -*] (-2,0.5)
+			to [short, -*] (opamp.-)
+			
+		(opamp.+) to [short] ($(opamp.+) + (0, -1.5)$) node [ground]{}
+			
+		(opamp.-) |- (-1,2) to [R, l=$R_2$] (1,2) -| (opamp.out)
+        	to [short, *-o] ($(opamp.out) + (1,0)$) node [right] {$V_o$}
+        ;    
+
+			\end{circuitikz}
+			\end{adjustbox}
+			\caption{Circuito B}
+		\end{subfigure}
+		\begin{subfigure}{.33\textwidth}
+			\begin{adjustbox}{width=1\textwidth}
+			\begin{circuitikz}[line width=.5pt]\draw
+			
+		(0,0) node [op amp] {}
+		($(opamp.-)+(-3.2,0)$) node [right] {$V_1$}
+		($(opamp.+)+(-3.2,0)$) node [right] {$V_2$}
+		
+		($(opamp.-)+(-2.5,0)$)	to [R, l=$R_1$, o-*] (opamp.-)
+
+		($(opamp.+)+(-2.5,0)$)	to [R, l=$R_3$, o-] (opamp.+)
+			
+		(opamp.+) to [R, l=$R_4$, *-] ($(opamp.+) + (0, -2)$) node [ground]{}
+			
+		(opamp.-) |- (-1,2) to [R, l=$R_2$] (1,2) -| (opamp.out)
+        	to [short, *-o] ($(opamp.out) + (1,0)$) node [right] {$V_o$}
+        ;  
+	
+			\end{circuitikz}
+			\end{adjustbox}
+			\caption{Circuito C}
+		\end{subfigure}
+		
+		\caption{Circuitos com Amplificador Operacional}
+		\label{fig1}
+\end{figure}
+
+
+\subsection{Expressões Matemáticas}
+
+Obtenha as expressões matemáticas da saída $V_o(t)$ em função das entradas e dos valores (literais) dos resistores para os
+circuitos A, B e C da Figura 2.1. Quais os nomes dados a cada uma destas configurações de Amp Op?
+
+\subsubsection{Circuito A}
+
+\begin{figure}[H]
+	\centering
+\begin{circuitikz}[line width=.5pt, scale = .8, transform shape] \draw
+  				(0, 0) node[op amp] (opamp) {}
+        		(opamp.-) to[R , l^= $R_1$, i<=$i_1$,-o] (-4, 0.5)node [left]{$V_1$}
+        		(opamp.-) |- (-1, 2) to[R, l= $R_2$, i^<=$i_2$] (1, 2) -| (opamp.out)
+        		to [short, -o] ($(opamp.out) + (.5,0)$)
+        		($(opamp.out) + (.5,0)$) node [right] {$V_o$}
+        
+        (opamp.+)to [short] ($(opamp.+)+(0,-1)$) node [ground] {}
+        
+        ;
+        
+   			 \draw  (opamp.-) to[short,*-] ++(0,0);    
+   			 \draw  (opamp.out) to[short,-*] ++(0,0);
+ 	
+\end{circuitikz}
+
+
+	\caption{Amplificador Inversor}
+\end{figure}
+
+
+	\justify
+	
+	Devemos notar que as entradas do Amplificador Operacional são nulas. Dessa forma, podemos escrever a seguinte relação:
+	\begin{gather*}
+		i_1=i_2 
+		\\
+		\\
+		\dfrac{0-V_1}{R_1}=\dfrac{V_o -0}{R_2}
+		\Longrightarrow
+		\dfrac{V_o}{R_2} = \dfrac{-V_1}{R_1}
+	\end{gather*}
+	
+	Esse circuito é conhecido como Amplificador inversor, pois
+	\begin{equation}\label{eqna}
+		V_o=-\dfrac{R_2}{R_1}V_1
+	\end{equation}
+
+\subsubsection{Circuito B}
+
+
+
+
+\begin{figure}[H]
+
+	\centering
+\begin{circuitikz}[line width=.5pt, scale=.8, transform shape] \draw
+		(0,0) node [op amp] {}
+		(-4.7,1.5) node [right] {$V_1$}
+		(-4.7,.5) node [right] {$V_2$}
+		(-4.7,-.5) node [right] {$V_3$}
+		(-4, 1.5)	to [R, l=$R_1$, i=$i_1$, o-] (-2,1.5)
+			to [short, -*] (-2,-.5)
+		(-4, .5)	to [R, l=$R_3$, i=$i_2$, o-] (-2,.5)
+		(-4, -.5)	to [R, l=$R_4$, i=$i_3$, o-] (-2,-.5)	
+			to [short, -] (-2,0.5)
+			to [short, -*] (opamp.-) node [below] {$0V$}
+			
+		(opamp.+) to [short] ($(opamp.+) + (0, -1.5)$) node [ground]{}
+			
+		(opamp.-) |- (-1,2) to [R, l=$R_2$, i^<=$i$] (1,2) -| (opamp.out)
+        	to [short, *-o] ($(opamp.out) + (1,0)$) node [right] {$V_o$}
+        ;    
+    
+
+\end{circuitikz}
+
+	\caption{Amplificador Somador Inversor}
+\end{figure}
+	
+	De mesma forma que o anterior, considerando o modelo ideal, as entradas são nulas e o ganho, infinito. Assim podemos aplicar a lei de Kirchoff:
+	
+	\begin{gather*}
+		i = i_1 + i_2 + i_3
+        \\
+        \\
+		\dfrac{V_o-0}{R_2}=\dfrac{0-V_1}{R_1}+\dfrac{0-V_2}{R_3} + \dfrac{0-V_3}{R_3}		
+	\end{gather*}
+	\begin{equation}\label{eqnb}
+		V_o = - \left(\dfrac{V_1}{R_1}+\dfrac{V_2}{R_3}+\dfrac{V_3}{R_3}	\right)R_2
+	\end{equation}
+	Esta última explicita a propriedade soma e inversão do circuito.
+
+
+\subsubsection{Circuito C}
+
+	\begin{figure}[H]
+	\centering
+	
+		\begin{circuitikz}[line width=.5pt, scale = .8, transform shape]\draw
+		(0,0) node [op amp] {}
+		($(opamp.-)+(-3.2,0)$) node [right] {$V_1$}
+		($(opamp.+)+(-3.2,0)$) node [right] {$V_2$}
+		
+		($(opamp.-)+(-2.5,0)$)	to [R, l=$R_1$, i=$i_1$, o-*] (opamp.-) node [below] {$V_-$}
+
+		($(opamp.+)+(-2.5,0)$)	to [R, l=$R_3$, o-] (opamp.+) node [above] {$V_+$}	
+			
+		(opamp.+) to [R, l=$R_4$, *-] ($(opamp.+) + (0, -2)$) node [ground]{}
+			
+		(opamp.-) |- (-1,2) to [R, l=$R_2$, i=$i_2$] (1,2) -| (opamp.out)
+        	to [short, *-o] ($(opamp.out) + (1,0)$) node [right] {$V_o$}
+        ;  
+	\end{circuitikz}
+
+	\caption{Circuito Subtrator}
+	\end{figure}
+
+	Considerando as condições ideais, construa a lei de Kirchhoff para as tensões referente ao nó da entrada inversora e da entrada não inversora:
+	
+	\begin{gather*}	
+		i_1 = i_2
+		\\
+		\\
+		\dfrac{V_- - V_1}{R_1}= \dfrac{V_o - V_-}{R_2}
+        \Longrightarrow
+		\dfrac{V_-}{R_1} + \dfrac{V_-}{R_2} = \dfrac{V_o}{R_2} + \dfrac{V_1}{R_1}
+	\end{gather*}
+	\\
+	\begin{equation} \label{3_1}
+		\left(\dfrac{1}{R_1} + \dfrac{1}{R_2}\right)V_- = \dfrac{V_o}{R_2} + \dfrac{V_1}{R_1}
+	\end{equation}
+		Nesse ponto, necessitamos encontrar um valor que relacione os resistores $R_3$ e $R_4$. Notando que $V_-=V_+$, calcularemos a expressão para o nó $V_+$:
+
+%\begin{minipage}{.4\linewidth}
+	\begin{gather*}
+		V_-=V_+
+		\\
+		\\
+		\dfrac{V_+ -V_2}{R_3}+\dfrac{V_+ - 0}{R_4} = 0
+        \Longrightarrow
+		\dfrac{V_+}{R_3} + \dfrac{V_+}{R_4} = \dfrac{V_2}{R_3}
+		\Longrightarrow
+		\left(\dfrac{1}{R_3 + R_4}\right) V_+ = \dfrac{V_2}{R_3}
+	\end{gather*}
+	\\
+	\begin{equation}\label{eqn3_2}
+		V_+ = \left(\dfrac{R_3 R_4}{R_3 + R_4}\right) \dfrac{V_2}{R_3}
+	\end{equation}
+%\end{minipage}
+%\begin{minipage}{.5\linewidth}
+	Substituindo \ref{eqn3_2} em \ref{3_1}, temos
+	\\
+	\begin{equation*}
+	\left(\dfrac{R_1+R_2}{R_1 R_2}\right)\left(\dfrac{R_3 R_4}{R_3 + R_4}\right)\dfrac{V_2}{R_3} = \dfrac{V_o}{R_2} + \dfrac{V_1}{R_1}
+	\end{equation*}
+	\\
+	Isolando o $\dfrac{V_o}{R_2}$, obtemos
+	\\
+	\begin{equation*}
+		\left(\dfrac{R_1+R_2}{R_1 R_2}\right)\left(\dfrac{R_3 R_4}{R_3 + R_4}\right)\dfrac{V_2}{R_3} - \dfrac{V_1}{R_1} = \dfrac{V_o}{R_2}
+	\end{equation*}
+	\\
+	\begin{equation}
+		V_o = \left(\dfrac{R_1+R_2}{R_1 R_2}\right)\left(\dfrac{R_3 R_4}{R_3 + R_4}\right)\dfrac{R_2}{R_3} V_2 - \dfrac{R_2}{R_1}V_1
+	\end{equation}
+	
+%\end{minipage}

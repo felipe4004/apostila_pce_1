@@ -1,0 +1,216 @@
+\section{Simulações}
+
+Usando o simulador de circuitos QUCS 0.0.19, faça a simulação do procedimento experimental descrito no item 2.4e. Além dos desenhos do circuito, inclua em seu estudo pré-laboratorial as formas de onda de cada canal, sobrepostas à forma de onda da fonte.
+
+
+\subsection{Onda Quadrada}
+
+\begin{itemize}
+    \item Abra um novo esquemático.
+\end{itemize}
+
+\figuras{.4}{imagens/sim/form_waves/new_sch}{Insersão de um novo esquemático.}{new_sch}
+
+\begin{itemize}
+    \item Na aba Componentes, vá em componentes
+    agrupados e coloque um resistor no esquemático.
+    Vá em fontes e coloque um pulso de tensão no
+    esquemático. Vá em ponteiras e coloque um
+    voltímetro no esquemático.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \subfiguras{.3}{.8}{imagens/sim/form_waves/res_ins}{}{}
+    \subfiguras{.3}{.8}{imagens/sim/form_waves/volt_prove}{}{}
+    \subfiguras{.3}{.8}{imagens/sim/form_waves/source_pulse}{}{}
+    \caption{Inserção dos componentes.}
+    \label{comp_ins}
+\end{figure}
+
+\newpage
+
+\begin{itemize}
+    \item Como queremos uma onda quadrada e o offset da função é 1 V, U1 deve ser -1 V e U2 deve ser 3 V. $T_r$ e $T_f$ devem ser igual a zero. O sinal se inicia em zero então T1 deve ser 0. Como a frequência é de 15 kHz, encontra-se o valor do período de aproximadamente $66,67 \mu s$, logo T2 deve ser $33.33 \mu s$ (arredonda-se para $33,5 \mu s$ ).
+\end{itemize}
+
+\figuras{.5}{imagens/sim/form_waves/param_pulse}{Parâmetro do pulso.}{new_sch}
+
+\begin{itemize}
+    \item Será utilizada a simulação transiente para se
+    observar o comportamento do circuito. Essa
+    simulação realiza uma análise temporal que permitirá
+    observar gráficos em relação ao tempo.
+\end{itemize}
+
+\figuras{.3}{imagens/sim/form_waves/trans_sim}{Inserção da simulação transiente.}{sim_trans}
+
+\begin{itemize}
+    \item Como o período da onda é de 67ns, coloque tempo
+    suficiente para visualizar um período completo e
+    resolução grande o suficiente para gerar a onda.
+\end{itemize}
+
+\figuras{.5}{imagens/sim/form_waves/param_transient_pulse}{Parâmetros para a simulação transiente.}{trans_sim_param}
+
+\begin{itemize}
+    \item Utilize um resistor de $1 k\ohm$ para verificar a onda gerada. Conecte os componentes sem esquecer a referência do terra como na figura abaixo:
+\end{itemize}
+
+\figuras{.5}{imagens/sim/form_waves/square_circ}{Circuito a ser montado.}{circ_square}
+
+\begin{itemize}
+    \item Salve e simule. Vá em Diagramas e insira um plano cartesiano.
+\end{itemize}
+
+
+\figura{1}{imagens/sim/form_waves/save_sim}
+\figuras{.3}{imagens/sim/form_waves/cartesian_diagram}{Inserção de um plano cartesiano.}{}
+
+\begin{itemize}
+    \item Coloque a tensão medida pelo voltímetro no gráfico
+    e arrume o limite para aparecer o pulso da onda.
+\end{itemize}
+
+\figuras{.5}{imagens/sim/form_waves/param_diagram}{Parâmetros para o diagrama cartesiano.}{}
+
+\newpage
+
+\begin{itemize}
+    \item Assim, verifica-se a forma de onda pedida no
+    exercício.
+\end{itemize}
+
+\figuras{.8}{imagens/sim/form_waves/final_square}{Resultado exigido pelo exercício.}{final1}
+
+\subsection{Onda Triangular}
+
+\begin{itemize}
+    \item Vá em Arquivo $\rightarrow$ Salvar como... e mude o nome do
+    arquivo para utilizar o esquemático já montado para
+    a segunda onda.
+
+    \item Como o offset da função é 0 V, U1 deve ser -3 V e U2
+    deve ser 3 V. O sinal se inicia em zero então T1 deve
+    ser 0. Como a frequência é de 4 kHz, encontra-se o
+    valor do período de 0,25 ms, logo T2 deve ser $250 \mu s$.
+    Como queremos uma onda triangular, $T_r$ e $T_f$ devem
+    ser metade do período, ou seja, $125\mu s$.
+\end{itemize}
+
+\figuras{.5}{imagens/sim/form_waves/param_trian_source}{Parâmetros para a fonte de tensão triangular.}{param_trian_source}
+
+\begin{itemize}
+    \item Será utilizada a simulação transiente para se
+    observar o comportamento do circuito. Essa
+    simulação realiza uma análise temporal que permitirá
+    observar gráficos em relação ao tempo.
+\end{itemize}
+
+
+\figuras{.3}{imagens/sim/form_waves/trans_sim}{Inserção da simulação transiente.}{sim_trans}
+
+\begin{itemize}
+    \item Como o período da onda é de $250 \mu s$, coloque
+    tempo suficiente para visualizar um período
+    completo e resolução grande o suficiente para gerar
+    a onda, ou seja, maior ou igual a $250 \mu s$.
+\end{itemize}
+
+\figuras{.4}{imagens/sim/form_waves/param_transient_trian}{Configuração dos parâmetros para a simulação transiente.}{param_transient_trian}
+
+\begin{itemize}
+    \item Salve e simule o arquivo. Vá em Diagramas e insira um plano cartesiano
+\end{itemize}
+
+\figura{1}{imagens/sim/form_waves/save_sim}
+\figuras{.3}{imagens/sim/form_waves/cartesian_diagram}{Inserção de um plano cartesiano.}{}
+
+\begin{itemize}
+    \item Coloque a tensão medida pelo voltímetro no gráfico.
+\end{itemize}
+
+\figuras{.5}{imagens/sim/form_waves/param_diagram}{Parâmetros para o diagrama cartesiano.}{}
+
+\newpage
+
+\begin{itemize}
+    \item Assim, verifica-se a forma de onda pedida no
+    exercício.
+\end{itemize}
+
+\figuras{.8}{imagens/sim/form_waves/final_trian}{Resultado exigido pelo exercício.}{final2}
+
+\subsection{Onda Senoidal}
+
+\begin{itemize}
+    \item Vá em Arquivo $\rightarrow$ Salvar como... e mude o nome do
+    arquivo para utilizar o esquemático já montado para
+    a terceira onda.
+
+    \item Como se quer uma onda senoidal, troque a fonte
+    para uma fonte de tensão AC.
+\end{itemize}
+
+\figuras{.3}{imagens/sim/form_waves/ac_source}{Inserção de uma fonte AC.}{ac_source}
+
+\begin{itemize}
+    \item Configure sem o offset.
+\end{itemize}
+
+\figuras{.5}{imagens/sim/form_waves/param_sin_source}{Parâmetros da fonte AC.}{param_ac_source}
+
+\begin{itemize}
+    \item Utilize a ferramenta de Equação para colocar o
+    offset na onda.
+\end{itemize}
+
+\figura{.7}{imagens/sim/form_waves/ins_eqn}
+\figuras{.5}{imagens/sim/form_waves/eqn_param}{Parâmetros da equação de offset.}{eqn_param}
+
+\begin{itemize}
+    \item Será utilizada a simulação transiente para se
+    observar o comportamento do circuito. Essa
+    simulação realiza uma análise temporal que permitirá
+    observar gráficos em relação ao tempo.
+\end{itemize}
+
+\figuras{.3}{imagens/sim/form_waves/trans_sim}{Inserção da simulação transiente.}{sim_trans}
+
+\begin{itemize}
+    \item Como o período da onda é de 1 ms, coloque tempo
+    suficiente para visualizar um período completo e
+    resolução grande o suficiente para gerar a onda.
+\end{itemize}
+
+
+\figuras{.5}{imagens/sim/form_waves/param_transient_sin}{Parâmetros para a simulação transiente.}{sim_trans}
+
+\begin{itemize}
+    \item Salve e simule o arquivo. Vá em Diagramas e insira um plano cartesiano.
+\end{itemize}
+
+\figuras{.3}{imagens/sim/form_waves/cartesian_diagram}{Inserção de um plano cartesiano.}{digram_ins}
+
+\begin{itemize}
+    \item Coloque a equação calculada no gráfico.
+\end{itemize}
+
+\figuras{.5}{imagens/sim/form_waves/param_diagram_sin}{Parâmetro do diagrama cartesiano.}{param_diagram}
+
+\begin{itemize}
+    \item Assim, verifica-se a forma de onda pedida no
+    exercício.
+\end{itemize}
+
+\figuras{.9}{imagens/sim/form_waves/final_sin}{Resultado esperado pelo exercício.}{final3}
+
+\newpage
+
+\subsection{Extra: Verificação no Octave/Matlab}
+
+No Octave ou Matlab, digite o escreva o código abaixo e execute.
+
+\lstinputlisting{imagens/sim/octave/wave_forms.m}
+ 
+\figuras{1}{imagens/sim/octave/waves_form}{Formas de onda obtidas.}{waves_form}

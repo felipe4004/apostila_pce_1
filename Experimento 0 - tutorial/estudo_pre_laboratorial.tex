@@ -1,0 +1,110 @@
+\section{Objetivos}
+Nesta experiência investigaremos alguns dos instrumentos de bancada do laboratório a fim de compreender como
+funcionam. Em seguida produziremos sinais DC e realizaremos medições de tensão,corrente e resistência. O intuito é desenvolver habilidades na manipulação dos equipamentos.
+
+\section{Estudo pré-laboratorial}
+
+\subsection{Instrumentos de Bancada}
+
+\subsubsection{Fonte de alimentação}
+
+\begin{itemize}
+    \item \textbf{O que é faixa de tensão de saída do equipamento?}
+        
+        É a faixa de tensões em que o aparelho fornece em sua saída. Ela pode ser limitada nominalmente pelo usuário através de um potenciômetro (em algumas literaturas, \textit{knob}). A faixa de tensões vária em função do modo de operação escolhido entre os canais de saída da fonte.
+
+    \item \textbf{O que é faixa de corrente de saída do equipamento?}
+
+        É a faixa de corrente que o aparelho fornece em sua saída. É análogo à faixa de tensões, mas conta, vale ressaltar, com o ajuste de corrente limite. A faixa de corrente também vária em função do modo de operação configurada na fonte.
+    \item \textbf{O que é corrente limite?}
+
+        É a corrente máxima configurada pelo usuário a partir da qual a proteção contra sobrecorrente atua. A quantidade de corrente opera a partir da resistência oferecida pelo circuito, ou seja, se há algum componente que esteja danificado, há probabilidades que haja o sobreaquecimento e, com isso, até a combustão do componente.
+\end{itemize}
+
+\subsubsection{Modos de Operação de Fontes de Alimentação}
+
+Atualmente há, majoritariamente, dois tipos de fonte no laboratório: MPL-1303 e MPL-3305, ambas da Minipa e, portanto, compartilham do mesmo manual. A principal diferença reside entre a quantidade de canais de saída existentes: a MPL-1303 possui apenas um canal de saída, enquanto a MPL-3305 possui dois canais de saída. Implica-se, então, que a MPL-1303 possui apenas o modo de operação simples.
+
+Para todas os modos de operação, devemos configurar as teclas de Seleção do Modo de Conexão (também conhecidas como Teclas de Tracking). Elas mudam a conexão entre as fontes de acordo com as associações desejadas. As configurações de Tracking dos modos Independente, Série ou paralelo para a fonte MPL-3305 estão elencados abaixo:
+
+\figuras{.5}{imagens/instr_banc/tracking}{Configurações de Conexão}{tracking}
+
+\begin{itemize}
+     
+    \item \textbf{Fixa}
+
+        A fonte MPL-3305 conta com três saídas, sendo duas variáveis e uma fixa de 5V.
+        
+        \newpage
+
+    \item \textbf{Simples}
+
+        É o modo onde os canais de saída operam independentemente. A corrente máxima é de 5A.
+
+        \figuras{.5}{imagens/instr_banc/op_simples}{Modo de Operação Simples.}{op_simples}
+    \item \textbf{Paralelo}
+
+        Nessa condição, os canais operam paralelamente e, consequentemente, as corrente se somam. A corrente máxima é, portanto, 10A.
+
+        \figuras{.4}{imagens/instr_banc/op_paralelo}{Modo de Operação Paralela.}{op_paralelo}
+
+    \item \textbf{Série}
+
+        Nessa condição, os canais operam em serialmente e, consequentemente, as tensões se somam. A tensão máxima é 64V.
+
+        \figuras{.4}{imagens/instr_banc/op_serie}{Modo de Operação Série.}{op_serie}
+    \item \textbf{Simétrica}
+    
+        Nesta condição, pode-se conseguir um terra comum para ambos os canais variáveis, com saída positiva e negativa de, no máximo, +32V e -32V, respectivamente. 
+    
+        \figuras{.4}{imagens/instr_banc/op_simetric}{Modo de Operação Simétrica.}{op_simetrica}
+\end{itemize}
+
+O ajuste de corrente limite é ilustrado na figura abaixo:
+
+\figuras{.4}{imagens/instr_banc/corr_lim}{Configuração da Corrente Limite na fonte MPL-3305}{}
+
+Observe que, propositalmente, não houve um detalhamento das peculiaridades de cada um dos modos de operação. Através dos manuais dos equipamentos, procure compreender o modo de funcionamento das fontes de alimentação. Como guia, responda as seguintes perguntas:
+
+a) Fonte de alimentação modelo MPL-1303 Minipa:
+
+\begin{itemize}
+    \item Qual a faixa de tensão de saída desse equipamento?
+    \item Qual a faixa de corrente de saída desse equipamento?
+    \item Como definir um valor máximo de corrente de saída para a fonte (corrente limite)?
+\end{itemize}
+
+\vspace{.5em}
+
+b) Fonte de alimentação modelo MPL-3305 Minipa:
+
+\begin{itemize}
+    \item Qual a faixa de tensão de saída para esse equipamento?
+    \item Qual a faixa de corrente de saída para esse equipamento?
+    \item Quais os limites de tensão e corrente obtidos em cada um dos modos de operação?
+\end{itemize}
+
+\subsubsection{Multímetro}
+
+\begin{itemize}
+    \item \textbf{Medição de Tensão com Multímetro:}Posicione a chave rotativa para medição de voltagem contínua e conecte as pontas de prova em paralelo no circuito em teste.
+    
+    \figuras{.2}{imagens/instr_banc/mult_tens}{Medição de tensão com o multímetro.}{tens_mult}
+
+    \item \textbf{Medição de corrente com o Multímetro:} Posicione a chave rotativa na maior escala possível de corrente e ajuste para uma visualização adequada. Conecte as pontas de prova em série no local a ser medido.
+    
+    \figuras{.35}{imagens/instr_banc/corr_mult}{Medição de corrente com o multímetro.}{corr_mult}
+    
+    \item \textbf{Medição de Resistência com o multímetro:} Posicione a chave rotativa em "$\ohm$". Conecte as pontas de prova sobre o objeto a ser medido.
+    
+    \figuras{.2}{imagens/instr_banc/res_mult}{Medição de Resistência com o multímetro.}{res_mult}
+
+    \item \textbf{Integridade de Trilhas:} Posicione a chave rotativa para medição de continuidade. O aparelho sonoriza um \textit{beep} quando a resistência de um circuito for menor que $10\ohm$.
+    
+    \figuras{.2}{imagens/instr_banc/int_trilh}{Teste de integridade de trilhas com o multímetro.}{int_trilh}
+\end{itemize}
+
+Assim como as fontes de tensão, há dois modelos de multímetro disponíveis no laboratório atualmente: ET-1110 da Minipa e o TOOZ DT830 Series. Estude a manipulação e as características nos manuais do aparelho.
+
+
+

@@ -1,0 +1,133 @@
+\newpage
+\begin{center}
+    \Large \bfseries 119148 – Prática de Circuitos Eletrônicos 1 – Folha de Dados
+\end{center}
+
+\vspace{.5cm}
+
+\setlength{\parindent}{0.0cm}
+
+\makebox[.3\textwidth][l]{Turma:\enspace\rule{2cm}{0.4pt}}
+\makebox[.3\textwidth][l]{Bancada:\enspace\rule{2cm}{.4pt}}
+\makebox[.3\textwidth][l]{Data:\enspace\rule{1cm}{.4pt}/\rule{1cm}{.4pt}/\rule{1cm}{.4pt}}
+\\
+\\
+\makebox[.7\textwidth][l]{Nome:\enspace\rule{.6\textwidth}{0.4pt}}
+\makebox[.5\textwidth][l]{Matrícula:\enspace\rule{1cm}{.4pt}/\rule{2cm}{.4 pt}}
+
+\vspace*{5mm}
+\begin{center}
+    \large \bfseries Experimento 09: Circuitos com Amplificador Operacional
+\end{center}
+\vspace{5mm}
+
+Resistores usados:
+\\
+\\
+\begin{center}
+$R_{1}=$\enspace \rule{1.8cm}{.4pt}\enspace$\pm$\enspace\rule{1.8cm}{.4pt}\enspace$[\Omega]$\hspace{1cm}$R_{2}=$\enspace \rule{1.8cm}{.4pt}\enspace$\pm$\enspace \rule{1.8cm}{.4pt}\enspace$[\Omega]$
+\par\end{center}
+\begin{center}
+$R_{3}=$\enspace \rule{1.8cm}{.4pt}\enspace$\pm$\enspace\rule{1.8cm}{.4pt}\enspace$[\Omega]$\hspace{1cm}$R_{4}=$\enspace\rule{1.8cm}{.4pt}\enspace$\pm$\enspace \rule{1.8cm}{.4pt}\enspace$[\Omega]$
+\par\end{center}
+
+\vspace{5mm}
+
+\noindent Procedimento 6.1: Caracterização - Tabela 1
+
+\begin{table}[H]
+\begin{tabular}{|C{2cm}|>{\centering}p{5cm}|>{\centering}p{2cm}|>{\centering}p{2cm}|>{\centering}p{2cm}|>{\centering}p{2cm}|}
+\hline 
+\multirow{2}{*}{Circuito} & {\small{}Configuração das Entradas}{\small\par}
+
+Senoide com $f=$\enspace\rule{1cm}{.4pt}\enspace Hz & Saída 
+
+$V_{o_{pp}}$ & Ganho Experim. & Ganho Teórico & Ganho \\ \%Erro\tabularnewline
+\toprule 
+\multirow{1}{*}{A} & $V_{1}=0,5V_{pp}$ &  &  &  & \tabularnewline
+\midrule
+ & $V_{1}=V_{2}=V_{3}=0,5V_{pp}$ &  &  &  & \tabularnewline
+\cmidrule{2-6}
+B & $V_{1}=V_{2}=0,5V_{pp}$ e $V_{3}=0V_{pp}$ &  &  &  & \tabularnewline
+\cmidrule{2-6}
+ & $V_{1}=0,5V_{pp}$ e $V_{2}=V_{3}=0V_{pp}$ &  &  &  & \tabularnewline
+\midrule
+ & $V_{1}=V_{2}=0,5V_{pp}$ &  &  &  & \tabularnewline
+\cmidrule{2-6}
+C & $V_{1}=0,5V_{pp}$ e $V_{2}=0V_{pp}$ &  &  &  & \tabularnewline
+\cmidrule{2-6}
+ & $V_{1}=0V_{pp}$ e $V_{2}=0,5V_{pp}$ &  &  &  & \tabularnewline
+\bottomrule
+\end{tabular}
+\caption*{\textbf{Tabela 1} - Avaliação das características de circuitos com amplificador operacional}
+\end{table}
+
+
+Procedimento 6.2 a): Slew-rate
+\\
+\\
+Entrada: Onda quadrada com amplitude $V=$\enspace\rule{1.3cm}{.4pt}
+$V_{pp}$ e $f=$\enspace\rule{1.2cm}{.4pt} \enspace$\textrm{Hz}$\\
+\\
+$\frac{\delta V(t)}{dt}=$\enspace \rule{1.5cm}{.4pt}\enspace $\frac{V}{\mu s}$
+\vspace{0.5cm}
+
+Procedimento 3.2 b): Saturação
+\\
+\\
+Entrada: Onda senoidal com amplitude $V=$\enspace\rule{1.4cm}{.4pt}
+$V_{pp}$ e $f=$\enspace \rule{1.5cm}{.4pt}\enspace $\textrm{Hz}$\\
+\\
+\\
+$V_{o}(t)_{m\acute{a}x}=$\enspace\rule{1.5cm}{.4pt}\enspace $V$\hspace{3cm}$V_{o}(t)_{m\acute{\imath}n}=$\enspace\rule{1.5cm}{.4pt}\enspace$V$\\
+\vspace{0.5cm}
+
+\pagebreak
+
+Procedimento 6.3): Resposta em frequência - Tabela 2
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|>{\centering}p{5cm}|>{\centering}p{2cm}|>{\centering}p{2cm}|}
+\hline 
+Senoide com $V_{1}(t)=$\enspace\rule{1.5cm}{.4pt}\enspace $V_{pp}$ & Saída 
+
+$V_{o_{pp}}$ & Ganho Experimental\tabularnewline
+\hline 
+$10\,\textrm{Hz}$ &  & \tabularnewline
+\hline 
+$100\,\textrm{Hz}$ &  & \tabularnewline
+\hline 
+$500\,\textrm{Hz}$ &  & \tabularnewline
+\hline 
+$1\,\textrm{kHz}$ &  & \tabularnewline
+\hline 
+$10\,\textrm{kHz}$ &  & \tabularnewline
+\hline 
+$20\,\textrm{kHz}$ &  & \tabularnewline
+\hline 
+$30\,\textrm{kHz}$ &  & \tabularnewline
+\hline 
+$40\,\textrm{kHz}$ &  & \tabularnewline
+\hline 
+$50\,\textrm{kHz}$ &  & \tabularnewline
+\hline 
+$75\,\textrm{kHz}$ &  & \tabularnewline
+\hline 
+$100\,\textrm{kHz}$ &  & \tabularnewline
+\hline 
+$500\,\textrm{kHz}$ &  & \tabularnewline
+\hline 
+$1\,\textrm{MHz}$ &  & \tabularnewline
+\hline 
+$5\,\textrm{MHz}$ &  & \tabularnewline
+\hline 
+$10\,\textrm{MHz}$ &  & \tabularnewline
+\hline 
+$20\,\textrm{MHz}$ &  & \tabularnewline
+\hline 
+\end{tabular}
+
+\caption{\textbf{Tabela 2} - Resposta em frequência do amplificador operacional.}
+\end{table}
