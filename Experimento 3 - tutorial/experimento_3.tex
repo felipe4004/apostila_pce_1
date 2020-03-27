@@ -1,7 +1,7 @@
 \documentclass[10pt]{article}
 \usepackage[portuguese]{babel}
 \usepackage[a4paper, top = 0.8in, bottom = 0.9in, left =0.6in, right = 0.6in]{geometry}
-\usepackage{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
 \usepackage{multirow}
 \usepackage{graphicx}
@@ -51,12 +51,18 @@
 \setlength{\tabcolsep}{0.5em} % for the horizontal padding
 {\renewcommand{\arraystretch}{1.2}}% for the vertical padding
 \captionsetup[table]{name= \bfseries Tabela}
-\numberwithin{table}{section}
+\numberwithin{table}{subsection}
 \usepackage{array}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 
 \aboverulesep=0cm
 \belowrulesep=0cm
+
+
+%arrumacao das figuras
+
+\captionsetup[figure]{name=\bfseries Figura}
+\numberwithin{figure}{section}
 
 %configuracoes dos codigos em matlab
 
@@ -144,10 +150,15 @@
 
 \begin{center}
 \vspace*{.03cm}
-\Large\bfseries{Experimento 00:}\\ %titulo
-\Large{*****}
+\Large\bfseries{Experimento 03:}\\ %titulo
+\Large{Análise de Circuitos Resistivos}
 \end{center}
 \justify
 
+\section{Objetivos}
+
+Demonstração prática do Princípio da superposição de sinais e do Teorema de Thévenin, com montagem em protoboard e realização de medidas de tensão e o cálculo da corrente em circuitos resistivos lineares. Comparação dos resultados teóricos com simulações de circuitos.
+
+\input{estudo_laboratorial.tex}
 
 \end{document}
