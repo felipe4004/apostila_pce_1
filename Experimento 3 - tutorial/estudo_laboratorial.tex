@@ -423,11 +423,306 @@ Logo,
 
 \noindent\textbf{b)} Verifique os resultados teóricos encontrados, simulando o circuito no Qucs 0.0.19. Obtenha os valores da saída $V_o$ correspondentes a cada uma das entradas possíveis ( 000 a 111 ).
 
-\figuras{.5}{imagens/DA/param_diagram.png}{<++>}{<++>}
-\figuras{.5}{imagens/DA/new_sch.png}{<++>}{<++>}
-\figuras{.5}{imagens/DA/v000.png}{<++>}{<++>}
-\figuras{.5}{imagens/DA/final_circuits_da.png}{<++>}{<++>}
-\figuras{.5}{imagens/DA/circuits_da.png}{<++>}{<++>}
-\figuras{.5}{imagens/DA/ins_dc_sim.png}{<++>}{<++>}
-\figuras{.5}{imagens/DA/ins_dc.png}{<++>}{<++>}
-\figuras{.5}{imagens/DA/ins_res.png}{<++>}{<++>}
+\begin{itemize}
+  \item Abra um novo esquemático.
+\end{itemize}
+
+
+\figuras{.3}{imagens/DA/new_sch.png}{Abra um novo esquemático.}{ins_schem}
+\begin{itemize}
+  \item Vá em componentes e coloque 7 resistores.
+  \item Vá em fontes e insira 6 fontes de tensão DC.
+\end{itemize}
+
+
+\begin{figure}[H]
+  \centering
+  \subfiguras{.45}{.7}{imagens/DA/ins_dc.png}{}{ins_dc}
+  \subfiguras{.45}{.7}{imagens/DA/ins_res.png}{}{ins_dc}
+  \caption{Inserção dos componentes.}
+  \label{fig:ins_comp}
+\end{figure}
+
+\begin{itemize}
+  \item Monte o circuito ajustando os valores para os pedidos no exercício. Não se esqueça do terra.
+    Neste caso, assumiu-se $R=50\ohm$. Nomeio o nó para medir $V_o$.
+\end{itemize}
+
+\figuras{.5}{imagens/DA/v000.png}{Montagem de circuito.}{mont_circuit}
+\begin{itemize}
+  \item Replique o circuito 7 vezes copiando e colando. Insira as fontes para cada palavra binária. Não esquecendo que o bit mais significativo encontra-se a esquerda.
+\end{itemize}
+
+\figuras{1}{imagens/DA/circuits_da.png}{Circuitos após serem replicados.}{circ_replic}
+\begin{itemize}
+  \item Vá na aba simulações e insira a simulação DC.
+  \item Salve e simule.
+\end{itemize}
+
+\figura{.2}{imagens/DA/ins_dc_sim.png}
+\figuras{1}{imagens/DA/save_sim.png}{Insira a simulação e simule}{save_sim}
+
+\begin{itemize}
+  \item Insira em Diagramas e insira uma tabela. Coloque os valores das tensões nos nós.
+\end{itemize}
+
+\figuras{.4}{imagens/DA/param_diagram.png}{Parâmetros para os diagramas.}{param_diagram}
+\begin{itemize}
+  \item Assim verifica-se os valores pedidos no exercício.
+\end{itemize}
+
+\figuras{1}{imagens/DA/final_circuits_da.png}{Resultado final esperado.}{res_final}
+
+\newpage
+
+\subsection{Teorema de Norton e Thévenin}
+
+\begin{figure}[H]
+  \centering
+    \begin{subfigure}{.35\textwidth}
+      \centering
+      \begin{circuitikz}[line width = .5pt, scale = .8, transform shape, american voltages]
+        \draw
+        (0,0) to [V, l=V1, invert] (0,4)
+        to [R, l=$R_1$] (2,4) to [R, l=$R_3$] (4,4) -- (6,4)
+        to [R, l_=$R_L$, *-*] (6,0) -- (0,0)
+        ;
+        \draw 
+        (2,4) to [R, l=$R_2$, *-*] (2,0);
+        \draw
+        (4,4) to [R, l=$R_2$, *-*] (4,2) to [V,l=$V_2$, -*] (4,0);
+        \draw 
+        (6,4) node [right] {A};
+        \draw
+        (6,0) node [right] {B};
+      \end{circuitikz}
+    \caption{}
+    \label{circ:circ_orig}
+  \end{subfigure}
+  \begin{subfigure}{.3\textwidth}
+    \centering
+    \begin{circuitikz}[line width = .5pt, scale = .8, transform shape, american voltages]
+      \draw
+      (4,0) -- (0,0) to [V, l=$V_{th}$, invert] (0,2)
+      to [R, l=$R_{th}$] (2,2)-- (4,2)
+      ;
+      \draw
+      (2,2) to [R, l=$R_L$,*-*] (2,0);
+      \draw
+      (4,2) node [right] {A};
+      \draw
+      (4,0) node [right] {B};
+    \end{circuitikz}
+    \caption{}
+    \label{circ:eq_thev}
+  \end{subfigure}
+  \begin{subfigure}{.3\textwidth}
+    \centering
+    \begin{circuitikz}[line width = .5pt, scale = .8, transform shape, american currents]
+      \draw
+      (5,0) -- (0,0) to [I, l=$I_{NO}$] (0,2)
+      -- (5,2)
+      ;
+      \draw
+      (1,2) to [R, l=$R_{NO}$] (1,0);
+      \draw
+      (3,2) to [R, l=$R_L$] (3,0);
+      \draw
+      (5,0) node [right] {B};
+      \draw
+      (5,2) node [right] {A};
+    \end{circuitikz}
+    \caption{}
+    \label{circ:eq_norton}
+  \end{subfigure}
+
+  \caption{(a) Circuito original, (b) Equivalente Thévenin, (c) Equivalente Norton}
+  \label{circ: eq_th_nt}
+
+\end{figure}
+Para os circuitos da Fig. \ref{circ: eq_th_nt}, assuma $R_1 = 100\ohm$, $R_2 = 4,7k\ohm$, $R_3 = R_4 = 1 k\ohm$, $V_1 = 3 V$ e $V_2 = 2 V$ e responda: 
+
+\noindent \textbf{a)} Quais os valores de tensão $V_{AB}$ e corrente $i_AB$ sobre o resistor de carga para o circuito da Fig. \ref{circ:circ_orig}? Calcule também a corrente sobre o resistor $R_3$ . Dica: use o teorema da superposição novamente. 
+
+Aplicando a LKT conseguimos as seguintes equações:
+
+\[
+  \begin{cases}
+    \dfrac{V_C-V_A}{R_3} +
+    \dfrac{V_C-V1}{R_3} +
+    \dfrac{V_C}{R_2}=0 \\
+    \\
+    \dfrac{V_A}{R_L} + 
+    \dfrac{V_A-V_C}{R_3} +
+    \dfrac{V_A-V2}{R_4} =0
+  \end{cases}
+  \rightarrow
+  \begin{cases}
+    \left(\dfrac{1}{R_3} + \dfrac{1}{R_3} +\dfrac{1}{R_2} \right)V_C + \left(\dfrac{-1}{R_3}\right)V_A = \dfrac{V_1}{R_3} 
+    \\
+    \left(\dfrac{1}{R_L} + \dfrac{1}{R_3}+ \dfrac{1}{R_4}\right) V_A + \left(\dfrac{-1}{R_3} \right)V_C = \dfrac{V_2}{R_4} 
+\]
+
+Dispondo em forma matricial
+
+\[
+  \begin{bmatrix}
+    11,213 & -1\\ -1 & 2,4545
+  \end{bmatrix}
+  \cdot
+  \begin{bmatrix}
+    V_C \\ V_A
+  \end{bmatrix}
+  =
+  \begin{bmatrix}
+    30 \\ 2
+  \end{bmatrix}
+
+\]
+
+Resolvendo a matriz, tem-se
+
+\begin{gather}
+  V_C = 2,8518 
+  \\
+  V_A = 1,9767
+\end{gather}
+ 
+onde
+
+\begin{gather}
+  i_{R_3}=\dfrac{V_C-V_A}{R_3} =0,8751 A \\
+  i_{AB}=\dfrac{V_A}{R_L} = 0,8985A
+\end{gather}
+
+
+
+\noindent \textbf{b)} Obtenha as expressões de $V_{Th}$ e $R_{Th}$ para o circuito equivalente mostrado na Fig. \ref{circ:eq_thev}. 
+
+Encontrando para $V_{th}$, temos
+\begin{gather*}
+  \dfrac{V_A - V_{th}}{R_{th}} + \dfrac{V_A}{R_L} = 0 \rightarrow \dfrac{V_A}{R_{th}} + \dfrac{V_A}{ R_L} = \dfrac{V_{th}}{R_{th}} \\
+  \dfrac{(R_{th}+R_L)}{R_{th}R_L} V_A = \dfrac{V_{th}}{R_{th}} \\
+  V_{th}=\dfrac{(R_{th}+R_L)}{R_L} V_A
+\end{gather*}
+
+Encontrando para $R_{th}$, temos
+
+\begin{gather*}
+  \dfrac{V_A-V_{th}}{R_{th}} + \dfrac{V_A}{R_L} = 0 \rightarrow \dfrac{-V_A + V_{th} }{R_{th}} =\dfrac{V_A}{R_L} \\
+  R_{th}=\dfrac{(V_{th}-V_A}{V_A} R_L
+\end{gather*}
+
+
+\noindent \textbf{c)} Obtenha as expressão de $I_{NO}$ e de $R_{NO}$ para o circuito equivalente mostrado na Fig. \ref{circ:eq_norton}. 
+
+Obtendo para $I_{NO}$, temos
+\begin{gather*}
+  \dfrac{V_A}{R_L} + \dfrac{V_A}{R_{NO}} = I_{NO}\\
+  I_{NO}=\dfrac{(R_{NO}+R_L)}{R_{NO}R_L} V_A\\
+  I_{NO} = \dfrac{V_{th}}{R_{th}} 
+\end{gather*}
+
+Obtendo para $R_{NO}$, temos
+
+\begin{gather*}
+  \dfrac{V_A}{R_{NO}} + \dfrac{V_A}{R_L} =I_{NO}
+  \rightarrow
+  \dfrac{V_A}{R_{NO}} =I_{NO}-\dfrac{V_A}{R_L} \\
+  R_{NO}=\dfrac{V_AR_L}{I_{NO}R_L-V_A} \\
+  R_{NO}=R_{th}
+\end{gather*}
+
+
+
+\noindent \textbf{d)} Descreva como é possível obter experimentalmente os valores de $V_{Th}$ e $R_{Th}$ para um circuito. E para $I_{NO}$ e de $R_{NO}$? 
+
+Para calcular $R_{th}$, deve-se substituir todas as fontes de tensão do circuito por curtos-circuitoe todas as fontes de corrente por circuitos abertos e, em seguida, determinar a resistência equivalente entre os terminais escolhidos.
+
+Para calcular $V_{th}$, deve-se determinar a diferença de potencial entre os terminais escolhidos em aberto (circuito aberto).
+
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[line width = .5pt, scale = .8, transform shape]
+    \draw
+    (0,0) node[draw,minimum width=2cm,minimum height=2.4cm, anchor=south west] (A) {A}
+    ;
+    \draw
+    (4,0) node[draw, minimum width=2cm, minimum height=2.4cm, anchor=south west] (B) {B};
+    \draw
+    (2,2) to [short, -*] (3,2) -- (4,2);
+    \draw
+    (2,.5) to [short, -*] (3,.5) -- (4,.5);
+    \draw
+    (3,2) node [above] {a};
+    \draw
+    (3,.5) node [below] {b};
+  \end{circuitikz}\hspace{2cm}
+  \begin{circuitikz}[line width=.5pt, scale=.8, transform shape, american voltages]
+    \draw
+    (10,0) node [draw, minimum width=2cm, minimum height=2.4cm, anchor=south west] (B) {B};
+    \draw
+    (10,2) to [short, -*] (9,2) to [R=$R_{th}$] (6,2) to [V=$V_{th}$] (6,.5)
+    to [short, -*] (9,.5) -- (10,.5);
+    \draw
+    (9,.5) node [below] {b};
+    \draw
+    (9,2) node [above] {a};
+    \draw 
+    [dashed] (5,0) -- (8,0) -- (8,2.5) -- (5,2.5) -- (5,0);
+    \draw
+    (6.5,2.5) node [above] {Equivalente Thévenin};
+  \end{circuitikz}
+  \caption{Equivalente Thévenin.}
+  \label{circ:eq_thev}
+\end{figure}
+
+O teorema de Norton é utilizado para simplificar um circuito complexo em termos de correntes em vez de tensões. Esse teorema afirma que qualquer rede ligada aos terminais a e b, pode ser substituída por uma única fonte de corrente $I_N$ em paralelo  com uma única  resistência $R_N$($R_{th}=R_{NO}$).
+
+\begin{figure}[H]
+  \centering
+  \begin{circuitikz}[line width = .5pt, scale = .8, transform shape]
+    \draw
+    (0,0) node [draw, minimum width=2cm, minimum height=2.4cm, anchor=south west] (A){A};
+    \draw
+    (2,2) to [short, -*] (3,2) to [short, -*] (3,.5) -- (2,.5);
+    \draw
+    (3,2) node [above] {a};
+    \draw
+    (3,.5) node [below] {b};
+    \draw
+    [-latex] (4,1) -- (5,1);
+  \end{circuitikz}
+  \begin{circuitikz}[line width = .5pt, scale=.8, transform shape, american voltages]
+    \draw
+    (6,0) to [V,V=$V_{th}$, invert] (6,2) to [R, l=$R_{th}$, -*] (10,2) to [short, -*]
+    (10,0) -- (6,0);
+    \draw
+    [-latex] (10.5,2) -- (10.5,0);
+    \draw
+    (10,2) node [above] {a};
+    \draw 
+    (10,0) node [below] {b};
+    \draw
+    (10.7,1) node [right] {$I_{sc}$};
+    \draw
+    [-latex] (11.5,1) -- (12,1);
+    
+  \end{circuitikz}
+  \begin{circuitikz}[line width = .5pt, scale=.8, transform shape, american currents]
+    \draw
+    (18,0) to [short,*-] (14,0) to [I,l=$I_N$] (14,2) to [short, -*]  (18,2);
+    \draw
+    (16,2) to [R, l=$R_N$] (16,0);
+    \draw
+    [dashed] (12.5,-.5) -- (12.5,2.5) -- (17,2.5) -- (17,-.5) -- (12.5,-.5);
+    \draw
+    (14,2.5) node [above] {Equivalente Norton};
+  \end{circuitikz}
+  \caption{Equivalente Norton.}
+  \label{circ:eq_norton}
+\end{figure}
+
+\newpage
+
+\noindent \textbf{e)} Simule os três circuitos da Fig. 2.3 e obtenha os valores de tensão V AB e corrente i AB sobre o resistor de carga.

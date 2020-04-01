@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.11)  26 MAR 2020 20:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.3.11)  30 MAR 2020 18:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -926,25 +926,28 @@ LaTeX Warning: Label `circ:conv_da' multiply defined.
 LaTeX Warning: Label `circ:conv_da' multiply defined.
 
 
-LaTeX Warning: Label `fig:{<++>}' multiply defined.
+LaTeX Warning: Label `fig:{ins_dc}' multiply defined.
 
 
-LaTeX Warning: Label `fig:{<++>}' multiply defined.
+LaTeX Warning: Label `sub@fig:{ins_dc}' multiply defined.
 
 
-LaTeX Warning: Label `fig:{<++>}' multiply defined.
+LaTeX Warning: Label `circ:eq_thev' multiply defined.
 
 
-LaTeX Warning: Label `fig:{<++>}' multiply defined.
+LaTeX Warning: Label `circ:eq_norton' multiply defined.
 
 
-LaTeX Warning: Label `fig:{<++>}' multiply defined.
+LaTeX Warning: Label `fig:{}' multiply defined.
 
 
-LaTeX Warning: Label `fig:{<++>}' multiply defined.
+LaTeX Warning: Label `sub@fig:{}' multiply defined.
 
 
-LaTeX Warning: Label `fig:{<++>}' multiply defined.
+LaTeX Warning: Label `fig:{}' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:{}' multiply defined.
 
 )
 \openout1 = `experimento_3.aux'.
@@ -1168,19 +1171,20 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [4]
-<imagens/DA/param_diagram.png, id=31, 479.54156pt x 395.97937pt>
-File: imagens/DA/param_diagram.png Graphic file (type png)
-<use imagens/DA/param_diagram.png>
-Package pdftex.def Info: imagens/DA/param_diagram.png  used on input line 426.
-(pdftex.def)             Requested size: 255.39151pt x 210.88919pt.
-<imagens/DA/new_sch.png, id=33, 177.66376pt x 28.60687pt>
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 427.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 427.
+<imagens/DA/new_sch.png, id=31, 176.15813pt x 31.61812pt>
 File: imagens/DA/new_sch.png Graphic file (type png)
 <use imagens/DA/new_sch.png>
-Package pdftex.def Info: imagens/DA/new_sch.png  used on input line 427.
-(pdftex.def)             Requested size: 255.39151pt x 41.12357pt.
+Package pdftex.def Info: imagens/DA/new_sch.png  used on input line 431.
+(pdftex.def)             Requested size: 153.23645pt x 27.50415pt.
 File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
 <use imagens/unb_fga_logo_extenso.jpg>
-Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 427.
+Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 434.
 (pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
 
 
@@ -1189,53 +1193,30 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5]
-<imagens/DA/v000.png, id=37, 514.92375pt x 277.78781pt>
-File: imagens/DA/v000.png Graphic file (type png)
-<use imagens/DA/v000.png>
-Package pdftex.def Info: imagens/DA/v000.png  used on input line 428.
-(pdftex.def)             Requested size: 255.39151pt x 137.77454pt.
-<imagens/DA/final_circuits_da.png, id=38, 1440.88312pt x 725.71124pt>
-File: imagens/DA/final_circuits_da.png Graphic file (type png)
-<use imagens/DA/final_circuits_da.png>
-Package pdftex.def Info: imagens/DA/final_circuits_da.png  used on input line 429.
-(pdftex.def)             Requested size: 255.39151pt x 128.62917pt.
-<imagens/DA/circuits_da.png, id=39, 1440.88312pt x 673.01437pt>
-File: imagens/DA/circuits_da.png Graphic file (type png)
-<use imagens/DA/circuits_da.png>
-Package pdftex.def Info: imagens/DA/circuits_da.png  used on input line 430.
-(pdftex.def)             Requested size: 255.39151pt x 119.28886pt.
-<imagens/DA/ins_dc_sim.png, id=40, 207.77625pt x 170.88844pt>
-File: imagens/DA/ins_dc_sim.png Graphic file (type png)
-<use imagens/DA/ins_dc_sim.png>
-Package pdftex.def Info: imagens/DA/ins_dc_sim.png  used on input line 431.
-(pdftex.def)             Requested size: 255.39151pt x 210.05853pt.
-File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
-<use imagens/unb_fga_logo_extenso.jpg>
-Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 431.
-(pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 24.29857pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6 <./imagens/DA/param_diagram.png> <./imagens/DA/new_sch.png> <./imagens/DA/v000.png> <./imagens/DA/final_circuits_da.png>]
-<imagens/DA/ins_dc.png, id=46, 202.50656pt x 157.33781pt>
+[5 <./imagens/DA/new_sch.png>]
+<imagens/DA/ins_dc.png, id=37, 202.50656pt x 157.33781pt>
 File: imagens/DA/ins_dc.png Graphic file (type png)
 <use imagens/DA/ins_dc.png>
-Package pdftex.def Info: imagens/DA/ins_dc.png  used on input line 432.
-(pdftex.def)             Requested size: 255.39151pt x 198.43153pt.
-<imagens/DA/ins_res.png, id=47, 201.75375pt x 165.61874pt>
+Package pdftex.def Info: imagens/DA/ins_dc.png  used on input line 440.
+(pdftex.def)             Requested size: 160.89485pt x 125.01093pt.
+<imagens/DA/ins_res.png, id=38, 201.75375pt x 165.61874pt>
 File: imagens/DA/ins_res.png Graphic file (type png)
 <use imagens/DA/ins_res.png>
-Package pdftex.def Info: imagens/DA/ins_res.png  used on input line 433.
-(pdftex.def)             Requested size: 255.39151pt x 209.65112pt.
-)
+Package pdftex.def Info: imagens/DA/ins_res.png  used on input line 441.
+(pdftex.def)             Requested size: 160.89485pt x 132.07819pt.
+<imagens/DA/v000.png, id=39, 514.92375pt x 277.78781pt>
+File: imagens/DA/v000.png Graphic file (type png)
+<use imagens/DA/v000.png>
+Package pdftex.def Info: imagens/DA/v000.png  used on input line 451.
+(pdftex.def)             Requested size: 255.39151pt x 137.77454pt.
+<imagens/DA/circuits_da.png, id=40, 1440.88312pt x 673.01437pt>
+File: imagens/DA/circuits_da.png Graphic file (type png)
+<use imagens/DA/circuits_da.png>
+Package pdftex.def Info: imagens/DA/circuits_da.png  used on input line 456.
+(pdftex.def)             Requested size: 510.78302pt x 238.57774pt.
 File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
 <use imagens/unb_fga_logo_extenso.jpg>
-Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 163.
+Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 459.
 (pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
 
 
@@ -1244,14 +1225,427 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[7 <./imagens/DA/circuits_da.png> <./imagens/DA/ins_dc_sim.png> <./imagens/DA/ins_dc.png>]
+[6 <./imagens/DA/ins_dc.png> <./imagens/DA/ins_res.png> <./imagens/DA/v000.png> <./imagens/DA/circuits_da.png>]
+<imagens/DA/ins_dc_sim.png, id=46, 207.77625pt x 170.88844pt>
+File: imagens/DA/ins_dc_sim.png Graphic file (type png)
+<use imagens/DA/ins_dc_sim.png>
+Package pdftex.def Info: imagens/DA/ins_dc_sim.png  used on input line 462.
+(pdftex.def)             Requested size: 102.15504pt x 84.01767pt.
+<imagens/DA/save_sim.png, id=47, 784.43062pt x 27.85406pt>
+File: imagens/DA/save_sim.png Graphic file (type png)
+<use imagens/DA/save_sim.png>
+Package pdftex.def Info: imagens/DA/save_sim.png  used on input line 463.
+(pdftex.def)             Requested size: 510.78302pt x 18.13763pt.
+<imagens/DA/param_diagram.png, id=48, 479.54156pt x 395.97937pt>
+File: imagens/DA/param_diagram.png Graphic file (type png)
+<use imagens/DA/param_diagram.png>
+Package pdftex.def Info: imagens/DA/param_diagram.png  used on input line 469.
+(pdftex.def)             Requested size: 204.31009pt x 168.70894pt.
+<imagens/DA/final_circuits_da.png, id=49, 1440.88312pt x 725.71124pt>
+File: imagens/DA/final_circuits_da.png Graphic file (type png)
+<use imagens/DA/final_circuits_da.png>
+Package pdftex.def Info: imagens/DA/final_circuits_da.png  used on input line 474.
+(pdftex.def)             Requested size: 510.78302pt x 257.25833pt.
+File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
+<use imagens/unb_fga_logo_extenso.jpg>
+Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 476.
+(pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 24.29857pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[7 <./imagens/DA/ins_dc_sim.png> <./imagens/DA/save_sim.png> <./imagens/DA/param_diagram.png> <./imagens/DA/final_circuits_da.png>]
+Overfull \hbox (2.55653pt too wide) in paragraph at lines 534--535
+ [][] 
+ []
+
+
+./estudo_laboratorial.tex:564: LaTeX Error: \begin{cases} on input line 560 ended by \end{equation*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.564 \]
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./estudo_laboratorial.tex:564: Missing $ inserted.
+<inserted text> 
+                $
+l.564 \]
+        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./estudo_laboratorial.tex:564: Missing } inserted.
+<inserted text> 
+                }
+l.564 \]
+        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./estudo_laboratorial.tex:564: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.564 \]
+        
+I'm guessing that you meant to end an alignment here.
+
+./estudo_laboratorial.tex:564: Missing $ inserted.
+<inserted text> 
+                $
+l.564 \]
+        
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./estudo_laboratorial.tex:564: Missing } inserted.
+<inserted text> 
+                }
+l.564 \]
+        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./estudo_laboratorial.tex:564: Missing \right. inserted.
+<inserted text> 
+                \right .
+l.564 \]
+        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./estudo_laboratorial.tex:565: Missing $ inserted.
+<inserted text> 
+                $
+l.565 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./estudo_laboratorial.tex:565: Missing } inserted.
+<inserted text> 
+                }
+l.565 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./estudo_laboratorial.tex:565: Display math should end with $$.
+<to be read again> 
+                   \@@par 
+l.565 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./estudo_laboratorial.tex:565: Extra }, or forgotten \endgroup.
+\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.565 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./estudo_laboratorial.tex:580: Missing $ inserted.
+<inserted text> 
+                $
+l.580 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./estudo_laboratorial.tex:580: Missing } inserted.
+<inserted text> 
+                }
+l.580 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./estudo_laboratorial.tex:580: Display math should end with $$.
+<to be read again> 
+                   \@@par 
+l.580 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+./estudo_laboratorial.tex:580: Extra }, or forgotten \endgroup.
+\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.580 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+./estudo_laboratorial.tex:581: LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.581 \]
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./estudo_laboratorial.tex:581: Missing $ inserted.
+<inserted text> 
+                $
+l.581 \]
+        
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+./estudo_laboratorial.tex:581: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.581 \]
+        
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
+<use imagens/unb_fga_logo_extenso.jpg>
+Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 614.
+(pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 24.29857pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[8]
+File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
+<use imagens/unb_fga_logo_extenso.jpg>
+Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 726.
+(pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 24.29857pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[9]) (./simulacoes.tex
+<imagens/nth_th/new_sch.png, id=64, 171.64125pt x 25.59563pt>
+File: imagens/nth_th/new_sch.png Graphic file (type png)
+<use imagens/nth_th/new_sch.png>
+Package pdftex.def Info: imagens/nth_th/new_sch.png  used on input line 5.
+(pdftex.def)             Requested size: 153.23645pt x 22.85071pt.
+<imagens/nth_th/ins_res.png, id=65, 201.75375pt x 165.61874pt>
+File: imagens/nth_th/ins_res.png Graphic file (type png)
+<use imagens/nth_th/ins_res.png>
+Package pdftex.def Info: imagens/nth_th/ins_res.png  used on input line 12.
+(pdftex.def)             Requested size: 91.9428pt x 75.47542pt.
+<imagens/nth_th/ins_dc.png, id=66, 202.50656pt x 157.33781pt>
+File: imagens/nth_th/ins_dc.png Graphic file (type png)
+<use imagens/nth_th/ins_dc.png>
+Package pdftex.def Info: imagens/nth_th/ins_dc.png  used on input line 13.
+(pdftex.def)             Requested size: 91.9428pt x 71.43515pt.
+<imagens/nth_th/probes.png, id=67, 203.25937pt x 115.93312pt>
+File: imagens/nth_th/probes.png Graphic file (type png)
+<use imagens/nth_th/probes.png>
+Package pdftex.def Info: imagens/nth_th/probes.png  used on input line 14.
+(pdftex.def)             Requested size: 91.9428pt x 52.44006pt.
+<imagens/nth_th/circuito_a.png, id=68, 473.51906pt x 259.7203pt>
+File: imagens/nth_th/circuito_a.png Graphic file (type png)
+<use imagens/nth_th/circuito_a.png>
+Package pdftex.def Info: imagens/nth_th/circuito_a.png  used on input line 23.
+(pdftex.def)             Requested size: 357.54655pt x 196.11736pt.
+<imagens/nth_th/ins_dc_sim.png, id=69, 207.77625pt x 170.88844pt>
+File: imagens/nth_th/ins_dc_sim.png Graphic file (type png)
+<use imagens/nth_th/ins_dc_sim.png>
+Package pdftex.def Info: imagens/nth_th/ins_dc_sim.png  used on input line 29.
+(pdftex.def)             Requested size: 153.23645pt x 126.03564pt.
+<imagens/nth_th/save_sim.png, id=70, 784.43062pt x 27.85406pt>
+File: imagens/nth_th/save_sim.png Graphic file (type png)
+<use imagens/nth_th/save_sim.png>
+Package pdftex.def Info: imagens/nth_th/save_sim.png  used on input line 30.
+(pdftex.def)             Requested size: 510.78302pt x 18.13763pt.
+File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
+<use imagens/unb_fga_logo_extenso.jpg>
+Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 34.
+(pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 24.29857pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[10 <./imagens/nth_th/new_sch.png> <./imagens/nth_th/ins_res.png> <./imagens/nth_th/ins_dc.png> <./imagens/nth_th/probes.png> <./imagens/nth_th/circuito_a.png> <./imagens/nth_th/ins_dc_sim.png> <./imagens/nth_th/save_sim.png>]
+<imagens/nth_th/table_thev.png, id=80, 491.58656pt x 410.2828pt>
+File: imagens/nth_th/table_thev.png Graphic file (type png)
+<use imagens/nth_th/table_thev.png>
+Package pdftex.def Info: imagens/nth_th/table_thev.png  used on input line 36.
+(pdftex.def)             Requested size: 204.31009pt x 170.52086pt.
+<imagens/nth_th/final_circuito_a.png, id=81, 605.26125pt x 259.7203pt>
+File: imagens/nth_th/final_circuito_a.png Graphic file (type png)
+<use imagens/nth_th/final_circuito_a.png>
+Package pdftex.def Info: imagens/nth_th/final_circuito_a.png  used on input line 42.
+(pdftex.def)             Requested size: 357.54655pt x 153.42387pt.
+<imagens/nth_th/save_as.png, id=82, 268.75406pt x 377.15906pt>
+File: imagens/nth_th/save_as.png Graphic file (type png)
+<use imagens/nth_th/save_as.png>
+Package pdftex.def Info: imagens/nth_th/save_as.png  used on input line 48.
+(pdftex.def)             Requested size: 153.23645pt x 215.0462pt.
+File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
+<use imagens/unb_fga_logo_extenso.jpg>
+Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 52.
+(pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 24.29857pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[11 <./imagens/nth_th/table_thev.png> <./imagens/nth_th/final_circuito_a.png> <./imagens/nth_th/save_as.png>]
+<imagens/nth_th/dis_en.png, id=88, 389.20406pt x 30.1125pt>
+File: imagens/nth_th/dis_en.png Graphic file (type png)
+<use imagens/nth_th/dis_en.png>
+Package pdftex.def Info: imagens/nth_th/dis_en.png  used on input line 54.
+(pdftex.def)             Requested size: 255.39151pt x 19.75989pt.
+<imagens/nth_th/final_circuito_a_dis1.png, id=89, 644.4075pt x 252.19218pt>
+File: imagens/nth_th/final_circuito_a_dis1.png Graphic file (type png)
+<use imagens/nth_th/final_circuito_a_dis1.png>
+Package pdftex.def Info: imagens/nth_th/final_circuito_a_dis1.png  used on input line 55.
+(pdftex.def)             Requested size: 357.54655pt x 139.93367pt.
+File: imagens/nth_th/save_as.png Graphic file (type png)
+<use imagens/nth_th/save_as.png>
+Package pdftex.def Info: imagens/nth_th/save_as.png  used on input line 61.
+(pdftex.def)             Requested size: 127.69576pt x 179.20421pt.
+File: imagens/nth_th/dis_en.png Graphic file (type png)
+<use imagens/nth_th/dis_en.png>
+Package pdftex.def Info: imagens/nth_th/dis_en.png  used on input line 67.
+(pdftex.def)             Requested size: 255.39151pt x 19.75989pt.
+<imagens/nth_th/final_circuito_a_dis2.png, id=90, 707.64375pt x 252.19218pt>
+File: imagens/nth_th/final_circuito_a_dis2.png Graphic file (type png)
+<use imagens/nth_th/final_circuito_a_dis2.png>
+Package pdftex.def Info: imagens/nth_th/final_circuito_a_dis2.png  used on input line 68.
+(pdftex.def)             Requested size: 357.54655pt x 127.42339pt.
+File: imagens/nth_th/save_as.png Graphic file (type png)
+<use imagens/nth_th/save_as.png>
+Package pdftex.def Info: imagens/nth_th/save_as.png  used on input line 75.
+(pdftex.def)             Requested size: 127.69576pt x 179.20421pt.
+File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
+<use imagens/unb_fga_logo_extenso.jpg>
+Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 76.
+(pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 24.29857pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[12 <./imagens/nth_th/dis_en.png> <./imagens/nth_th/final_circuito_a_dis1.png> <./imagens/nth_th/final_circuito_a_dis2.png>]
+<imagens/nth_th/final_circuito_a_dis3.png, id=95, 605.26125pt x 263.48438pt>
+File: imagens/nth_th/final_circuito_a_dis3.png Graphic file (type png)
+<use imagens/nth_th/final_circuito_a_dis3.png>
+Package pdftex.def Info: imagens/nth_th/final_circuito_a_dis3.png  used on input line 81.
+(pdftex.def)             Requested size: 357.54655pt x 155.6474pt.
+<imagens/nth_th/final_isc_voc.png, id=96, 712.16063pt x 552.56438pt>
+File: imagens/nth_th/final_isc_voc.png Graphic file (type png)
+<use imagens/nth_th/final_isc_voc.png>
+Package pdftex.def Info: imagens/nth_th/final_isc_voc.png  used on input line 87.
+(pdftex.def)             Requested size: 408.62796pt x 317.04753pt.
+File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
+<use imagens/unb_fga_logo_extenso.jpg>
+Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 88.
+(pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 24.29857pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[13 <./imagens/nth_th/final_circuito_a_dis3.png>]
+File: imagens/nth_th/save_as.png Graphic file (type png)
+<use imagens/nth_th/save_as.png>
+Package pdftex.def Info: imagens/nth_th/save_as.png  used on input line 94.
+(pdftex.def)             Requested size: 127.69576pt x 179.20421pt.
+File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
+<use imagens/unb_fga_logo_extenso.jpg>
+Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 96.
+(pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 24.29857pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[14 <./imagens/nth_th/final_isc_voc.png>]
+<imagens/nth_th/final_req.png, id=104, 690.32906pt x 478.03593pt>
+File: imagens/nth_th/final_req.png Graphic file (type png)
+<use imagens/nth_th/final_req.png>
+Package pdftex.def Info: imagens/nth_th/final_req.png  used on input line 102.
+(pdftex.def)             Requested size: 408.62796pt x 282.96512pt.
+<imagens/nth_th/final_eq_th_nt.png, id=105, 621.82312pt x 353.06906pt>
+File: imagens/nth_th/final_eq_th_nt.png Graphic file (type png)
+<use imagens/nth_th/final_eq_th_nt.png>
+Package pdftex.def Info: imagens/nth_th/final_eq_th_nt.png  used on input line 115.
+(pdftex.def)             Requested size: 408.62796pt x 232.01884pt.
+) (./experimento.tex
+File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
+<use imagens/unb_fga_logo_extenso.jpg>
+Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 1.
+(pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 24.29857pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[15 <./imagens/nth_th/final_req.png> <./imagens/nth_th/final_eq_th_nt.png>])
 
 Package caption Warning: Unused \captionsetup[table] on input line 53.
 See the caption package documentation for explanation.
 
 File: imagens/unb_fga_logo_extenso.jpg Graphic file (type jpg)
 <use imagens/unb_fga_logo_extenso.jpg>
-Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 164.
+Package pdftex.def Info: imagens/unb_fga_logo_extenso.jpg  used on input line 166.
 (pdftex.def)             Requested size: 426.79134pt x 20.69853pt.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1259,24 +1653,42 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[8 <./imagens/DA/ins_res.png>] (./experimento_3.aux)
+[16]
+
+./experimento_3.tex:166: LaTeX Error: \begin{equation*} on input line 549 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.166 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+(./experimento_3.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 549 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 29182 strings out of 492982
- 635213 string characters out of 6134896
- 877212 words of memory out of 5000000
- 32191 multiletter control sequences out of 15000+600000
- 17288 words of font info for 75 fonts, out of 8000000 for 9000
+ 30072 strings out of 492982
+ 656774 string characters out of 6134896
+ 877575 words of memory out of 5000000
+ 33037 multiletter control sequences out of 15000+600000
+ 18121 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,14n,81p,2958b,933s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on experimento_3.pdf (8 pages, 486001 bytes).
+ 62i,15n,89p,2958b,1167s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on experimento_3.pdf (16 pages, 669393 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 143 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 14414 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 14504 words of extra memory for PDF output out of 17280 (max. 10000000)
 
